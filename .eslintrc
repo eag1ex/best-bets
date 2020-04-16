@@ -1,0 +1,25 @@
+
+{
+  "env": {
+    "browser": true,
+    "node": true
+  }, 
+  "parserOptions": {
+   "parser": "babel-eslint",
+    "ecmaVersion": 2017,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-console":0,
+    "semi": 0,
+    "no-unused-vars":0,
+    "eslint-plugin-vue":0
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/recommended"
+  ],
+  "settings": {
+    "import/resolver": "webpack"
+  }
+}

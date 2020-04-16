@@ -1,0 +1,58 @@
+#top-nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 111;
+}
+
+.main-logo {
+    #logo-icon {
+        max-height: 60px;
+    }
+    #logo-text {
+        &:link {
+            color: #fff;
+        }
+
+        &:hover {
+            color: #fff;
+        }
+
+        text-transform: uppercase;
+        word-wrap: break-word;
+        white-space: initial;
+        max-width: 100px;
+        line-height: 0.9em;
+        color: #fff;
+        font-weight: 700;
+        font-size: 14px;
+    }
+}
+
+.main-logo {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.md-button,
+.md-list {
+    a,
+    a:link,
+    a:hover {
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: unset !important;
+    }
+}
+
+.div {
+    position: fixed;
+    left: 0;
+    z-index: 10;
+
+    .div-section-start {
+        &.absolute {
+            position: absolute;
+            left: 0;
+        }
+    }
+}

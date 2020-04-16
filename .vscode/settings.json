@@ -1,0 +1,100 @@
+{
+  "files.exclude": {
+    "**/node_modules": false,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true
+  },
+  "window.zoomLevel": 0,
+  "editor.tabSize": 1,
+  "sasslint.enable": true,
+  "jslint.enable": false,
+  "standard.enable": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "editor.insertSpaces": true,
+  "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "all",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    { "language": "html", "autoFix": true },
+    { "language": "vue", "autoFix": true }
+  ],
+  "eslint.autoFixOnSave": true,
+  "peacock.affectActivityBar": true,
+  "peacock.affectStatusBar": true,
+  "peacock.affectTitleBar": true,
+  "eslint.options": {
+    "extensions": [".js", ".vue"],
+    "configFile": "eslintrc.json"
+  },
+  "peacock.elementAdjustments": {
+    "activityBar": "lighten"
+  },
+  "standard.options": {
+    "ignore": ["node_modules/**"],
+    "plugins": ["html"],
+    "parser": "babel-eslint",
+    "envs": ["jest"]
+  },
+  "[scss]": {
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "prettier.tslintIntegration": true,
+  "prettier.stylelintIntegration": true,
+  "html.format.enable": true,
+
+  "commentAnchors.workspace.enabled": false,
+  "attrsSorter.order": [
+    "is",
+    "v-for",
+    "v-if",
+    "v-else-if",
+    "v-else",
+    "v-show",
+    "v-cloak",
+    "v-once",
+    "v-pre",
+    "id",
+    "ref",
+    "key",
+    "slot",
+    "v-model",
+    "v-model.+",
+    "v-bind",
+    "v-bind.+",
+    ":.+",
+    "v-text",
+    "v-text.+",
+    "v-html",
+    "v-html.+",
+    "class",
+    "v-on.+",
+    "@.+",
+    "name",
+    "data-.+",
+    "ng-.+",
+    "src",
+    "for",
+    "type",
+    "href",
+    "values",
+    "title",
+    "alt",
+    "role",
+    "aria-.+",
+    "$unknown$"
+  ],
+  "commentAnchors.workspace.excludeFiles": "**/{node_modules,.git,.idea,target,out,build,vendor}/**/*",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
+}
