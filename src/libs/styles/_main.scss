@@ -39,36 +39,39 @@
             }
 
             td:nth-child(1) {
+                // id
                 font-size: 18px;
                 font-weight: bold;
+                max-width: 20px;
             }
 
             td:nth-child(2) {
+                // compaign_name
                 img {
                     max-height: 42px;
                 }
+                max-width: 84px;
             }
 
             td:nth-child(3) {
                 // rating
-           
+                max-width: 50px;
             }
 
             td:nth-child(4) {
-                // review
-           
+                // review_link
+                text-align: left;
             }
 
             td:nth-child(5) {
-                // details
-           
+                // message
+                text-align: right;
             }
 
             td:nth-child(6) {
+                 // play_link
                 text-align: right;
-
-                // play button
-           
+                max-width: 110px;
             }
         }
     }

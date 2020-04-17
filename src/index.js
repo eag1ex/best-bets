@@ -21,6 +21,8 @@ import Spinner from './libs/partials/progress-spinner';
 import TopNav from './libs/partials/top-nav';
 import TopTitle from './libs/partials/top-title';
 import Footer from './libs/partials/footer';
+import Toggle from './libs/partials/vue-toggle';
+Vue.component('vue-toggle', Toggle);
 Vue.component('spinner', Spinner);
 Vue.component('top-nav', TopNav);
 Vue.component('top-title', TopTitle);

@@ -7,6 +7,8 @@
     "**/CVS": true,
     "**/.DS_Store": true
   },
+
+  "editor.formatOnSave": true,
   "window.zoomLevel": 0,
   "editor.tabSize": 1,
   "sasslint.enable": true,
@@ -17,11 +19,26 @@
   "editor.insertSpaces": true,
   "editor.renderControlCharacters": true,
   "editor.renderWhitespace": "all",
+  "beautify.language": {
+    "js": {
+      "type": ["javascript", "json"],
+      "filename": [".jshintrc", ".jsbeautifyrc"]
+    },
+    "css": ["css", "scss"],
+    "html": ["htm", "html"]
+    // ^^ providing just an array sets the VS Code file type
+  },
   "eslint.validate": [
     "javascript",
     "javascriptreact",
-    { "language": "html", "autoFix": true },
-    { "language": "vue", "autoFix": true }
+    {
+      "language": "html",
+      "autoFix": true
+    },
+    {
+      "language": "vue",
+      "autoFix": true
+    }
   ],
   "eslint.autoFixOnSave": true,
   "peacock.affectActivityBar": true,

@@ -5,83 +5,103 @@
 const sportsBooksData = [
  {
   id: 1,
-  CTA: '<a href="#"><img src="./src/libs/img/bet365-logo.jpg" alt="Bet 365"/></a>',
+  compaign_name:'Bet 365',
+  compaign_url:'bet365-logo.jpg',
   rating: 5,
-  review_link: 'goto',
+  review_link: 'https://www.google.com/search?q=reviewBet+365',
   message: '<strong>- Exclusive -</strong> <strong>$200</strong> Free Bet',
-  play_link: 'Play Now'
+  play_message: 'Play Now',
+  play_link:"#"
  },
  {
   id: 2,
-  CTA: '<a href="#"><img src="./src/libs/img/sports-interaction-logo.jpg" alt="Sports Interaction"/></a>',
+  compaign_name:'Sports Interaction',
+  compaign_url:'sports-interaction-logo.jpg',
   rating: 4,
-  review_link: 'goto',
+  review_link: 'https://www.google.com/search?q=Sports+Interaction',
   message: '<strong>- Exclusive -</strong> Bonus up to <strong>$200</strong>',
-  play_link: 'Play Now'
+  play_message: 'Play Now',
+  play_link:"#"
  },
  {
   id: 3,
-  CTA: '<a href="#"><img src="./src/libs/img/powerplaysports-logo.jpg" alt="Power Play Sports"/></a>',
+  compaign_name:'Power Play Sports',
+  compaign_url:'powerplaysports-logo.jpg',
   rating: 3,
-  review_link: 'goto',
+  review_link: 'https://www.google.com/search?q=Power+Play+Sports',
   message: '<strong>- Exclusive -</strong> <strong>$200</strong> Free Bet',
-  play_link: 'Play Now'
+  play_message: 'Play Now',
+  play_link:"#"
  },
  {
   id: 4,
-  CTA: '<a href="#"><img src="./src/libs/img/betway-logo.jpg" alt="Betway"/></a>',
+  compaign_name:'Betway',
+  compaign_url:'betway-logo.jpg',
   rating: 3,
-  review_link: 'goto',
+  review_link: 'https://www.google.com/search?q=',
   message: '100% Sign Up Bonus Up to <strong>$200</strong>',
-  play_link: 'Play Now'
+  play_message: 'Play Now',
+  play_link:"#"
  },
  {
   id: 5,
-  CTA: '<a href="#"><img src="./src/libs/img/spinsports-logo.jpg" alt="Spin Sports"/></a>',
+  compaign_name:'Spin Sports',
+  compaign_url:'spinsports-logo.jpg',
   rating: 2,
-  review_link: 'goto',
+  review_link: 'https://www.google.com/search?q=',
   message: '<strong>- Exclusive -</strong> Up to <strong>$500</strong> Free Bet',
-  play_link: 'Play Now'
+  play_message: 'Play Now',
+  play_link:"#"
  },
  {
   id: 6,
-  CTA: '<a href="#"><img src="./src/libs/img/bodog-logo.jpg" alt="Boodog"/></a>',
+  compaign_name:'Boodog',
+  compaign_url:'bodog-logo.jpg',
   rating: 5,
-  review_link: 'goto',
+  review_link: 'https://www.google.com/search?q=',
   message: '100% Sign Up Bonus Up to <strong>$200</strong>',
-  play_link: 'Play Now'
+  play_message: 'Play Now',
+  play_link:"#"
  },
  {
   id: 7,
-  CTA: '<a href="#"><img src="./src/libs/img/888spots-logo.jpg" alt="888 Sports"/></a>',
+  compaign_name:'888 Sports',
+  compaign_url:'888spots-logo.jpg',
   rating: 1,
-  review_link: 'goto',
+  review_link: 'https://www.google.com/search?q=',
   message: '<strong>- Exclusive -</strong> <strong>$200</strong> Free Bet',
-  play_link: 'Play Now'
+  play_message: 'Play Now',
+  play_link:"#"
  },
  {
   id: 8,
-  CTA: 'IO Sports',
+  compaign_name:'IO Sports',
+  compaign_url:'',
   rating: 5,
-  review_link: 'goto',
+  review_link: 'https://www.google.com/search?q=',
   message: '100% Sign Up Bonus Up to <strong>$200</strong>',
-  play_link: 'Play Now'
+  play_message: 'Play Now',
+  play_link:"#"
  },
  {
   id: 9,
-  CTA: '<a href="#"><img src="./src/libs/img/leovegas-logo.jpg" alt="LeoVegas"/></a>',
+  compaign_name:'LeoVegas',
+  compaign_url:'leovegas-logo.jpg',
   rating: 5,
-  review_link: 'goto',
+  review_link: 'https://www.google.com/search?q=',
   message: '<strong>- Exclusive -</strong> Up to <strong>$500</strong> Free Bet',
-  play_link: 'Play Now'
+  play_message: 'Play Now',
+  play_link:"#"
  },
  {
   id: 10,
-  CTA: '<a href="#"><img src="./src/libs/img/william-hill-logo.jpg" alt="William Hill"/></a>',
+  compaign_name:'William Hill',
+  compaign_url:'william-hill-logo.jpg',
   rating: 2,
-  review_link: 'goto',
+  review_link: 'https://www.google.com/search?q=',
   message: '100% Sign Up Bonus Up to <strong>$200</strong>',
-  play_link: 'Play Now'
+  play_message: 'Play Now',
+  play_link:"#"
  }
 ];
 export { sportsBooksData };

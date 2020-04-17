@@ -1,37 +1,61 @@
+@import "../../libs//styles/theme";
 
-#canada-flag{
- background:#fff url("../../../src/libs/img/canada-flag.gif") no-repeat top left;
- height: 34px;
- width: 68px;
+#canada-flag {
+  background: #fff url("../../../src/libs/img/canada-flag.gif") no-repeat top left;
+  height: 34px;
+  width: 68px;
+}
 
+.read_review {
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 14px;
 }
-.title{
- text-transform:uppercase;
- font-weight: 700;
+
+.title {
+  text-transform: uppercase;
+  font-weight: 700;
 }
-#view-all{
+
+#view-all {
   text-decoration: underline;
   font-size: 15px;
   font-weight: bold;
 }
-#sort-alpha{
- text-decoration: underline;
- font-weight: bold;
- font-size: 15px;
+
+div.line {
+  margin: 0 auto;
+
+  display: block;
+  border-bottom: 3px solid $red;
+  width: 100px;
 }
-#sort-by-cta{
- position: relative;
+
+#sort-alpha {
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 15px;
 }
-.rating-item{
- color:#fbc02d;
- font-size: smaller;
+
+#sort-by-cta {
+  position: relative;
 }
-.play_link{
- font-size: 14px;
- svg{
-   font-size: 23px!important;
- }
+
+.rating-item {
+  padding: 1px;
+  color: #fbc02d;
+  font-size: x-small;
 }
-.text-message{
- font-size: 17px;
+
+.play_message {
+  font-size: 14px;
+  font-weight: 600;
+
+  svg {
+    font-size: 23px !important;
+  }
+}
+
+.text-message {
+  font-size: 17px;
 }
