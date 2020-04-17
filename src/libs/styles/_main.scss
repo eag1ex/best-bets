@@ -74,5 +74,59 @@
                 max-width: 110px;
             }
         }
+        &.b-table-stacked{
+            tr{
+                height: auto;
+                width:200px;
+                float: left;
+                text-align: center!important;
+            }
+            td{
+                text-align:unset!important;
+                max-width: unset!important;
+                // hides data-lables on stacked mode :)
+                &[data-label]:before{
+                    content:""!important;
+                }
+                padding: 0;
+            }
+            td:nth-child(1) {
+                font-size: 26px;
+                max-height: 29px;
+                text-align:left!important;
+            }
+
+            td:nth-child(2) {
+                max-height: 36px;
+            }
+            td:nth-child(3) {
+                // rating
+               max-height: 33px;
+               font-size: 26px;
+            }
+
+            td:nth-child(4) {
+              max-height: 42px;
+            }
+
+            td:nth-child(5) {
+               min-height: 65px;
+               >div{
+                padding: 0;
+                width: 100%;
+               }
+            }
+            
+            td:nth-child(6) {
+                min-height: 83px;
+             }
+
+
+        }
+        &.table-not-stacked{
+
+        }
     }
+
+
 }

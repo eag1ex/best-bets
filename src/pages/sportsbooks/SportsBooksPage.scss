@@ -1,4 +1,4 @@
-@import "../../libs//styles/theme";
+@import "../../libs/styles/theme";
 
 #canada-flag {
   background: #fff url("../../../src/libs/img/canada-flag.gif") no-repeat top left;
@@ -11,6 +11,14 @@
   font-weight: bold;
   font-size: 14px;
 }
+.b-table-stacked{
+  .read_review{
+    font-size: 13px;
+    font-weight:normal;
+    color: $gray-600!important;
+  }
+}
+
 
 .title {
   text-transform: uppercase;
@@ -46,6 +54,7 @@ div.line {
   color: #fbc02d;
   font-size: x-small;
 }
+
 
 .play_message {
   font-size: 14px;

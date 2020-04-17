@@ -16,13 +16,14 @@
         <div class="line"></div>
       </div>
 
-      <vue-toggle v-bind:toggled="1" label="Disabled"></vue-toggle>
+      <vue-toggle v-bind:toggled="0" label="Disabled" @clickFromChild="handleToogle"></vue-toggle>
     </div>
 
     <b-table
       ref="table"
       id="sports-book-table"
       class="p-2"
+      v-bind:class="{'table-not-stacked': !isStacked}"
       small
       noCollapse
       primary-key="id"
@@ -34,6 +35,7 @@
       responsive
       striped
       hover
+      :stacked="isStacked"
       :tbody-transition-props="transProps"
       :fields="sportsBooksTable.fields"
       :items="sportsBooksTable.items"
@@ -62,8 +64,8 @@
         <span class="text-primary text-message" v-html="data.value"></span>
       </template>
 
-      <template v-slot:cell(play_message)="data">
-        <a class="btn btn-danger play_message w-100" :href="getByName(data).play_link">
+      <template v-slot:cell(play_message)="data" class="w-100">
+        <a class="btn btn-danger play_message" :href="getByName(data).play_link">
           <span class="d-flex d-flex justify-content-around">
             <span class="px-4">{{data.value}}</span>
             <b-icon icon="chevron-right" class="p-1"></b-icon>
@@ -91,7 +93,7 @@ export default {
   name: "SportsBooksPage",
   props: ["appStatus"],
   data: () => ({
-    toggled_2: 1,
+    isStacked: false, //or "'sm', 'md', 'lg', or 'xl'"
     transProps: { name: "flip-list" },
     sortInx: 0,
     loading: true,
@@ -112,6 +114,19 @@ export default {
     ...mapActions("sportsBooksAction", {
       getAllsportsbooks: "getAll"
     }),
+    handleToogle() {
+      this.isStacked = !this.isStacked;
+    },
+
+    /**
+     * - render important messages as strong (#) and super strong (##)
+     * example: `##- Exclusive -##` > becomes `<strong class="s1">- Exclusive -</strong>`
+     * example: `#$200#` > becomes `<strong class="s2">$200</strong>`
+     */
+
+    formatMessage() {
+      // `###223.55.66###  ##asddg45## `.match(/###(.*)###/)
+    },
 
     sortAlpha() {
       if (this.sortInx === 0)
@@ -149,6 +164,9 @@ export default {
     bTable(data = []) {
       if (!(data || []).length) return [];
 
+      const formatter = (value, key, item) => {
+        return value;
+      };
       /**
         id: 6,
         compaign_name: ,
@@ -159,9 +177,9 @@ export default {
        */
       return {
         fields: [
-          { key: "id", sortable: false },
-          { key: "compaign_name", sortable: true },
-          { key: "rating", sortable: false },
+          { key: "id", sortable: false, formatter },
+          { key: "compaign_name", sortable: true, formatter },
+          { key: "rating", sortable: false, formatter },
           "review_link",
           "message",
           "play_message"
