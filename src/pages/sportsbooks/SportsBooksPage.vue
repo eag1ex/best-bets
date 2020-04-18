@@ -18,7 +18,7 @@
             <div class="line"></div>
           </div>
           <vue-toggle
-            class="d-none d-sm-block"
+            class="d-none d-sm-block mr-3"
             v-bind:toggled="0"
             label="Disabled"
             @clickFromChild="handleToogle"
@@ -29,12 +29,14 @@
 
     <div class="row">
       <div id="outter-table" class="col-12 px-0">
+        <!--table component-->
         <sportsbook-table
           ref="sportsbooktable"
           v-if="sportsBooksTable"
           :tableData="sportsBooksTable"
           v-bind:isStacked="isStacked"
         ></sportsbook-table>
+        <!--table component:end-->
       </div>
     </div>
     <div class="row">
@@ -74,12 +76,28 @@ export default {
         }, 500);
       }
     });
+
+    this.detectResize();
   },
   methods: {
     ...mapActions("sportsBooksAction", {
       getAllsportsbooks: "getAll"
     }),
-
+    detectResize() {
+      const docSize = () => {
+        const mobileWidth = 575.98;
+        if (document.body.clientWidth <= mobileWidth) {
+          this.isStacked = false;
+        }
+        if (document.body.clientWidth > mobileWidth && !this.isStacked) {
+          this.isStacked = true;
+        }
+      };
+      window.addEventListener("resize", ev => {
+        docSize();
+      });
+      docSize();
+    },
     handleToogle() {
       this.isStacked = !this.isStacked;
     },
@@ -89,12 +107,14 @@ export default {
         const childRef = this.$refs["sportsbooktable"].$refs;
         if (this.sortInx === 0)
           childRef.table.localItems.sort((a, b) =>
-            b.compaign_name.localeCompare(a.compaign_name)
-          );
-        if (this.sortInx === 1)
-          childRef.table.localItems.sort((a, b) =>
             a.compaign_name.localeCompare(b.compaign_name)
           );
+        // back to original state
+        if (this.sortInx === 1) childRef.table.refresh();
+        // or reverse order
+        // childRef.table.localItems.sort((a, b) =>
+        //   b.compaign_name.localeCompare(a.compaign_name)
+        // );
         this.sortInx = this.sortInx == 0 ? 1 : 0;
       } catch (err) {
         console.error("sortAlpha", err);

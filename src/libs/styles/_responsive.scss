@@ -1,5 +1,25 @@
 
+// iphon5 or small phone
+@media (max-width: 320px) {
+ table#sports-book-table{  
+   tr{
+    td:nth-child(1) {
+     // id
+     display: none!important;
+    }
 
+    td:nth-child(2) {
+     // compaign_name
+     img {
+         max-height: unset!important;
+         width: 90px!important;
+     }
+       
+    }
+
+   }
+ }
+}
 @media (max-width: 575.98px) {
    .p-0-mobile{
     padding: 0;
@@ -43,9 +63,7 @@
     }
    }
 
-
-
-   table{  
+   table#sports-book-table{  
      border-spacing: 0.3em 1em!important;
      td img{
       height: auto!important;
@@ -53,7 +71,12 @@
      }
      td:nth-child(1) {
          width: 16px;
+         font-size: 23px!important;
       }
+      td:nth-child(3) {
+       // rating
+       display: none!important;
+      } 
    }
 
 

@@ -27,8 +27,13 @@
 
     <template v-slot:cell(compaign_name)="data">
       <span class="img">
-        <img :src="'./src/libs/img/'+getByName(data).compaign_url" :alt="data.value" />
+        <img :src="'./src/libs/img/'+getByName(data).compaign_img" :alt="data.value" />
       </span>
+      <a
+        :name="data.value +' | Casinos'"
+        class="offset_anchor"
+        :href="getByName(data).compaign_url"
+      >{{data.value}}</a>
     </template>
 
     <template v-slot:cell(rating)="data">
@@ -56,9 +61,24 @@
   </b-table>
 </template>
 <script>
+/**
+ * own sportsbook-table component
+ * requires `{tableData}` for binding
+ */
 export default {
   name: "sportsbook-table",
-  props: ["tableData", "isStacked"],
+  props: {
+    tableData: {
+      type: Array,
+      required: true,
+      default: []
+    },
+    isStacked: {
+      required: true,
+      type: Boolean,
+      default: false
+    }
+  },
   data: () => ({
     //isStacked: false, //or "'sm', 'md', 'lg', or 'xl'"
     transProps: { name: "flip-list" },
@@ -66,9 +86,9 @@ export default {
     sportsBooksTableData: {}
   }),
   created: function() {
-    console.log("this.tableData", this.tableData);
     this.sportsBooksTableData = this.bTable(this.tableData);
   },
+
   methods: {
     /**
      * - render important messages as strong (#) and super strong (##)
@@ -102,7 +122,9 @@ export default {
      * - return formated google url search query
      */
     compaingURL(item) {
-      const { compaign_name, id } = item;
+      const { compaign_name, id, review_link } = item;
+      if (review_link) return review_link;
+
       const base = `https://www.google.com/search`;
       const as_epq = compaign_name.replace(/ /gi, "+"); // make exact search results
       const lr = `lang_en`; // search results only in english

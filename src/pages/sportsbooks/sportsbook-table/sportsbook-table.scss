@@ -1,5 +1,13 @@
 
 @import "../../../libs/styles/theme";
+
+// blackhat seo link
+.offset_anchor{
+ color:rgba(0,0,0,0);
+ position: absolute;
+ left: -10000px;
+}
+
 .read_review {
  text-decoration: underline;
  font-weight: bold;
@@ -28,7 +36,6 @@
    font-size: 23px !important;
  }
 }
-
 
 .html-message {
  font-size: 17px;
