@@ -1,7 +1,7 @@
 /**
  * our mock data use together with `fake-backend`
  */
-const sportsBooksData = [
+let _sportsBooksData = [
  {
   id: 1,
   compaign_name: 'Bet 365',
@@ -10,6 +10,7 @@ const sportsBooksData = [
   rating: 5,
   review_link: 'https://www.google.com/search?q=reviewBet+365', // this will be printed instead
   message: '#1#- Exclusive -#1# #2#$200#2# Free Bet',
+  message_short: 'Free Bet #1#$250#1#', // mobile short message
   play_message: 'Play Now',
   play_link: "#"
  },
@@ -21,6 +22,7 @@ const sportsBooksData = [
   rating: 4,
   review_link: '', // when not set will generate new google search link
   message: '#1#- Exclusive -#1# Bonus up to #2#$200#2#',
+  message_short: 'Bonus #1#$200#1#',
   play_message: 'Play Now',
   play_link: "#"
  },
@@ -32,6 +34,7 @@ const sportsBooksData = [
   rating: 3,
   review_link: 'https://www.google.com/search?q=Power+Play+Sports',
   message: '#1#- Exclusive -#1# #2#$200#2# Free Bet',
+  message_short: 'Free Bet #1#$250#1#',
   play_message: 'Play Now',
   play_link: "#"
  },
@@ -43,6 +46,7 @@ const sportsBooksData = [
   rating: 3,
   review_link: '',
   message: '100% Sign Up Bonus Up to #2#$200#2#',
+  message_short: 'Bonus #1#$250#1#',
   play_message: 'Play Now',
   play_link: "#"
  },
@@ -54,6 +58,7 @@ const sportsBooksData = [
   rating: 2,
   review_link: '',
   message: '#1#- Exclusive -#1# Up to #2#$500#2# Free Bet',
+  message_short: 'Free Bet #1#$200#1#',
   play_message: 'Play Now',
   play_link: "#"
  },
@@ -65,6 +70,7 @@ const sportsBooksData = [
   rating: 5,
   review_link: '',
   message: '100% Sign Up Bonus Up to #2#$200#2#',
+  message_short: 'Bonus #1#$200#1#',
   play_message: 'Play Now',
   play_link: "#"
  },
@@ -76,6 +82,7 @@ const sportsBooksData = [
   rating: 1,
   review_link: '',
   message: '#1#- Exclusive -#1# #2#$200#2# Free Bet',
+  message_short: 'Bonus #1#$200#1#',
   play_message: 'Play Now',
   play_link: "#"
  },
@@ -87,6 +94,7 @@ const sportsBooksData = [
   rating: 5,
   review_link: '',
   message: '100% Sign Up Bonus Up to #2#$200#2#',
+  message_short: 'Bonus #1#$200#1#',
   play_message: 'Play Now',
   play_link: "#"
  },
@@ -98,6 +106,7 @@ const sportsBooksData = [
   rating: 5,
   review_link: '',
   message: '#1#- Exclusive -#1# Up to #2#$500#2# Free Bet',
+  message_short: 'Bonus #1#$200#1#',
   play_message: 'Play Now',
   play_link: "#"
  },
@@ -109,8 +118,15 @@ const sportsBooksData = [
   rating: 2,
   review_link: '',
   message: '100% Sign Up Bonus Up to #2#$200#2#',
+  message_short: 'Bonus #1#$200#1#',
   play_message: 'Play Now',
   play_link: "#"
  }
 ];
+
+// make {play_link} url same as  {compaign_url}
+const sportsBooksData = _sportsBooksData.map(z => {
+ z.play_link = z.compaign_url
+ return z
+})
 export { sportsBooksData };

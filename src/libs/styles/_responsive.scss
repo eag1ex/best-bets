@@ -1,98 +1,150 @@
-
 // iphon5 or small phone
 @media (max-width: 320px) {
- table#sports-book-table{  
-   tr{
-    td:nth-child(1) {
-     // id
-     display: none!important;
-    }
+    table#sports-book-table {
+        tr {
+            td:nth-child(1) {
+                // id
+                display: none !important;
+            }
 
-    td:nth-child(2) {
-     // compaign_name
-     img {
-         max-height: unset!important;
-         width: 90px!important;
-     }
-       
+            td:nth-child(2) {
+                // compaign_name
+                img {
+                    max-height: unset !important;
+                    width: 90px !important;
+                }
+            }
+        }
     }
-
-   }
- }
 }
+
 @media (max-width: 575.98px) {
-   .p-0-mobile{
-    padding: 0;
-   }
-   .col-12-mobile{
-    flex: 0 0 100%!important;
-    max-width: 100%!important;
-   }
 
-   .page-heading{
-    position: relative;
-    .heading{
-     margin: auto!important;
-     #canada-flag {
-      background-size:19px!important;
-      margin-top:0px!important; 
-      margin-bottom:0px!important; 
-      margin-right: 19px!important;
-      top:4px!important;
-     }
-     h2{
-      font-size: 14px;
-      margin-right: unset!important;
-      float: unset;
-     }
-     .line{
-      display: none!important;
-     }
+ 
+    .p-0-mobile {
+        padding: 0;
     }
-      button.sort-text{
-        position:absolute;
-        bottom: -25px;
-        z-index: 111;
-        right:0px;
-        font-size: 12px!important;
-       }
-   }
-   #sports-book-page {
-    #outter-table{
-     width: unset!important;
+
+    .col-12-mobile {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
     }
-   }
 
-   table#sports-book-table{  
-     border-spacing: 0.3em 1em!important;
-     td img{
-      height: auto!important;
-      width: 99%!important;
-     }
-     td:nth-child(1) {
-         width: 16px;
-         font-size: 23px!important;
-      }
-      td:nth-child(3) {
-       // rating
-       display: none!important;
-      } 
-   }
+   
+
+    #sports-book-page {
+
+        .page-heading {
+            position: relative;
+            margin-bottom: 2.2rem !important;
+            margin-top: 0.25rem !important;
+            .heading {
+                margin: auto !important;
+    
+                #canada-flag {
+                    background-size: 19px !important;
+                    margin-top: 0px !important;
+                    margin-bottom: 0px !important;
+                    margin-right: 12px !important;
+                    top: 4px !important;
+                    width: 21px!important
+                }
+    
+                h2 {
+                    font-size: 15px;
+                    margin-right: unset !important;
+                    float: unset;
+                }
+    
+                .line {
+                    display: none !important;
+                }
+            }
+    
+            button.sort-text {
+                position: absolute;
+                bottom: -41px;
+                z-index: 111;
+                right: 3px;
+                padding-right: 0px;
+                font-size: 12px !important;
+            }
+        }
 
 
- } // end @media
+        #outter-table {
+            width: unset !important;
+        }
+    }
 
- // @media (max-width: 575.98px) { ... }
+    table#sports-book-table {
+        border-spacing: 0.3em 0.7em !important;
+        td img {
+            height: auto !important;
+            width: 99% !important;
+        }
 
- // // Small devices (landscape phones, 576px and up)
- // @media (min-width: 576px) and (max-width: 767.98px) { ... }
- 
- // // Medium devices (tablets, 768px and up)
- // @media (min-width: 768px) and (max-width: 991.98px) { ... }
- 
- // // Large devices (desktops, 992px and up)
- // @media (min-width: 992px) and (max-width: 1199.98px) { ... }
- 
- // // Extra large devices (large desktops, 1200px and up)
- // @media (min-width: 1200px) { ... }
+        td:nth-child(1) {
+            width: 16px;
+            font-size: 23px !important;
+        }
 
+        td:nth-child(3) {
+            // rating
+            display: none !important;
+        }
+
+        td:nth-child(4) {
+            // review_link
+            .read_review {
+                font-size: 13px !important;
+            }
+        }
+
+        td:nth-child(5) {
+            line-height: 0.9em;
+            // message/html-message
+            .html-message {
+                font-size: 10px !important;
+                text-transform: uppercase;
+
+                strong.s1 {
+                    font-size: 17px !important;
+                    display: block;
+                }
+            }
+        }
+
+        td:nth-child(6) {
+            padding: 0;
+            margin: 0;
+            // play_link
+            a.play_message {
+                height: 100%;;
+                position: relative;
+                right: -4px;
+                border-radius: 0px 6px 6px 0px!important;
+                padding-right: 0;
+                padding-left: 0;
+                margin-right: 0;
+                svg {
+                    margin-top: .4rem;
+                    font-size: 31px !important;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+} // end @media
+
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) and (max-width: 767.98px) { ... }
+
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) and (max-width: 991.98px) { ... }
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }

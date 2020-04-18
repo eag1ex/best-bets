@@ -1,201 +1,214 @@
 /**
+sportsbook-table, partial scss
 styles declared here are loaded into `./styles/_main.scss`
- due to some dynamic elements are not picked up via component scope
+ due to some dynamic elements not picked up via component scope
+ - script borrows `_theme.css` variables included in `_main.scss`
+ - `_responsive.scss` also has some control over this script 
 **/
 
-
 // animation: unstack 0.3s ease-in-out alternate;
-
 // outter div
- // table animations
+// table animations
 div.table-not-stacked table#sports-book-table {
-  overflow: hidden;
-  tr{
-      cursor: pointer;
-      transition: all .3s ease-in-out; 
-      &:hover { 
-          transform: scale(1.01);
-      }
-      animation: unstack 0.2s ease-in alternate;
-  }
-  @keyframes unstack {
-      0% { 
-          width:220px;
-          height: 0px;
-          transform: translateY(-60px);
-       }
-      100% { 
-          width: 100%;
-          height: 60px;
-          transform: translateY(60px);
-         
-       }
-  }
-}
+    overflow: hidden;
 
-table#sports-book-table{
-      overflow: hidden;
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-      &.flip-list-move {
-          transition: transform 0.3s;
-      }
+    tr {
+        cursor: pointer;
+        transition: all .3s ease-in-out;
 
-      border-collapse: separate;
-      border-spacing: 1em 1em;
-
-      thead {
-          display: none;
-      }
-
-      .html-message {
-          strong.s1{
-            font-weight: 800;
-          }
-          strong.s2{
-            font-weight: 600;
-          }
+        &:hover {
+            transform: scale(1.01);
         }
 
-      tr {    
-          cursor: pointer;
-          transition: all .3s ease-in-out; 
-          &:hover { 
-              transform: scale(1.05);
-          }
+        animation: unstack 0.2s ease-in alternate;
+    }
 
+    @keyframes unstack {
+        0% {
+            width: 220px;
+            height: 0px;
+            transform: translateY(-60px);
+        }
 
-          background: none !important;
-          background-color: transparent !important;
-          box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.2) !important;
-          border-radius: 6px;
-          height: 60px;
-          width: 100%;
-          
-          td {
-              height: 60px;
-              vertical-align: middle;
-          }
+        100% {
+            width: 100%;
+            height: 60px;
+            transform: translateY(60px);
+        }
+    }
+}
 
-          td:nth-child(1) {
-              // id
-              font-size: 18px;
-              font-weight: bold;
-              max-width: 20px;
-              color:$dark!important;
-          }
+table#sports-book-table {
+    overflow: hidden;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 
-          td:nth-child(2) {
-              // compaign_name
-              img {
-                  max-height: 42px;
-              }
-              max-width: 84px;
-          }
+    &.flip-list-move {
+        transition: transform 0.3s;
+    }
 
-          td:nth-child(3) {
-              // rating
-              max-width: 50px;
-          }
+    border-collapse: separate;
+    border-spacing: 1em 1em;
 
-          td:nth-child(4) {
-              // review_link
-              text-align: left;
-          }
+    thead {
+        display: none;
+    }
 
-          td:nth-child(5) {
-              // message
-              text-align: right;
-          }
+    .html-message {
+        strong.s1 {
+            font-weight: 800;
+        }
 
-          td:nth-child(6) {
-               // play_link
-              text-align: right;
-              max-width: 110px;
-            
-          }
-      }
-      
-      &.b-table-stacked{
-         
-          tr{
-              height: auto;
-              width:220px;
-              float: left;
-              text-align: center!important;
-              margin: .6em;
-              animation: stack 0.1s ease-in-out alternate;
-          }
-          
-          td{
-              text-align:unset!important;
-              max-width: unset!important;
-              // hides data-lables on stacked mode :)
-              &[data-label]:before{
-                  content:""!important;
-              }
-              padding: 0;
-          }
-          td:nth-child(1) {
-              font-size: 26px;
-              max-height: 29px;
-              text-align:left!important;
-          }
+        strong.s2 {
+            font-weight: 600;
+        }
+    }
 
-          td:nth-child(2) {
-              max-height: 36px;
-          }
-          td:nth-child(3) {
-              // rating
-             max-height: 33px;
-             font-size: 26px;
-          }
+    tr {
+        cursor: pointer;
+        transition: all .3s ease-in-out;
 
-          td:nth-child(4) {
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        background: none !important;
+        background-color: transparent !important;
+        box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.3) !important;
+        border-radius: 6px;
+        height: 60px;
+        width: 100%;
+
+        td {
+            height: 60px;
+            vertical-align: middle;
+        }
+
+        td:nth-child(1) {
+            // id
+            font-size: 18px;
+            font-weight: bold;
+            max-width: 20px;
+            color: $dark !important;
+        }
+
+        td:nth-child(2) {
+            // compaign_name
+            img {
+                max-height: 42px;
+            }
+
+            max-width: 84px;
+        }
+
+        td:nth-child(3) {
+            // rating
+            max-width: 50px;
+        }
+
+        td:nth-child(4) {
+            // review_link
+            text-align: left;
+        }
+
+        td:nth-child(5) {
+            // message/html-message
+            text-align: right;
+        }
+
+        td:nth-child(6) {
+            // play_link
+            text-align: right;
+            max-width: 110px;
+        }
+    }
+
+    &.b-table-stacked {
+        tr {
+            height: auto;
+            width: 220px;
+            float: left;
+            text-align: center !important;
+            margin: .6em;
+            animation: stack 0.2s ease-in-out alternate;
+        }
+
+        td {
+            text-align: unset !important;
+            max-width: unset !important;
+
+            // hides data-lables on stacked mode :)
+            &[data-label]:before {
+                content: "" !important;
+            }
+
+            padding: 0;
+        }
+
+        td:nth-child(1) {
+            font-size: 26px;
+            max-height: 29px;
+            text-align: left !important;
+        }
+
+        td:nth-child(2) {
+            max-height: 36px;
+        }
+
+        td:nth-child(3) {
+            // rating
+            max-height: 33px;
+            font-size: 26px;
+        }
+
+        td:nth-child(4) {
             max-height: 42px;
-          }
+        }
 
-          td:nth-child(5) {
-             min-height: 70px;
-              padding-left: 20px;
-              padding-right: 20px;
-              // .s1 s2 are generated in SportsBooks component via `formatMessage` method
-              .html-message {
-                  strong.s1{
-                  display: block;
-                  }
-                  strong.s2{
-                 
-                  }
-              }
+        td:nth-child(5) {
+            min-height: 70px;
+            padding-left: 20px;
+            padding-right: 20px;
 
-             >div{
-              padding: 0;
-              width: 100%;
-             }
-          }
-          
-          td:nth-child(6) {
-              min-height: 70px;
-              >div{
-                  padding: 0;
-                  width: 100%;
-                 }
-           }
+            // .s1 s2 are generated in SportsBooks component via `formatMessage` method
+            .html-message {
+                strong.s1 {
+                    display: block;
+                }
 
+                strong.s2 {}
+            }
 
-      }
-      &.table-not-stacked{
-          //
-      }
-      @keyframes stack {
-          0% { 
-               width: 100%;
-              transform: translateX(50px);
-           }
-          100% { 
-              width:220px;
-              transform: translateX(0);
-           }
-      }
+            > div {
+                padding: 0;
+                width: 100%;
+            }
+        }
+
+        td:nth-child(6) {
+            min-height: 70px;
+
+            > div {
+                padding: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    &.table-not-stacked {
+        //
+   
+    }
+
+    @keyframes stack {
+        0% {
+            width: 100%;
+            transform: translateX(50px);
+        }
+
+        100% {
+            width: 220px;
+            transform: translateX(0);
+        }
+    }
 }

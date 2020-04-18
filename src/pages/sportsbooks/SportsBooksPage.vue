@@ -2,7 +2,7 @@
   <div id="sports-book-page" class="col-11 col-12-mobile p-0-mobile">
     <div class="row">
       <div class="w-100 mx-2">
-        <div class="d-flex justify-content-between my-4 page-heading">
+        <div class="d-flex justify-content-between mt-3 mb-4 page-heading">
           <button
             @click="sortAlpha"
             type="button"
@@ -28,13 +28,14 @@
     </div>
 
     <div class="row">
-      <div id="outter-table" class="col-12 px-0">
+      <div id="outter-table" class="col-12 px-1">
         <!--table component-->
         <sportsbook-table
           ref="sportsbooktable"
           v-if="sportsBooksTable"
           :tableData="sportsBooksTable"
           v-bind:isStacked="isStacked"
+          v-bind:mobileView="mobileView"
         ></sportsbook-table>
         <!--table component:end-->
       </div>
@@ -60,6 +61,7 @@ export default {
   name: "SportsBooksPage",
   props: ["appStatus"],
   data: () => ({
+    mobileView: false,
     isStacked: false,
     loading: true,
     sortInx: 0,
@@ -88,9 +90,11 @@ export default {
         const mobileWidth = 575.98;
         if (document.body.clientWidth <= mobileWidth) {
           this.isStacked = false;
+          this.mobileView = true;
         }
         if (document.body.clientWidth > mobileWidth && !this.isStacked) {
           this.isStacked = true;
+          this.mobileView = false;
         }
       };
       window.addEventListener("resize", ev => {

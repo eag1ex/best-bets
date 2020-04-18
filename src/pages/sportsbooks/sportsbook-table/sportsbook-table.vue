@@ -43,7 +43,11 @@
     </template>
 
     <template v-slot:cell(review_link)="data">
-      <a class="read_review text-dark" :href="data.value" target="_blank">Read Review</a>
+      <a
+        class="read_review text-dark"
+        :href="data.value"
+        target="_blank"
+      >{{isMobile()? "Review":"Read Review"}}</a>
     </template>
 
     <template v-slot:cell(message)="data">
@@ -51,11 +55,12 @@
     </template>
 
     <template v-slot:cell(play_message)="data" class="w-100">
-      <a class="btn btn-danger play_message" :href="getByName(data).play_link">
-        <span class="d-flex d-flex justify-content-around">
+      <a target="_blank" class="btn btn-danger play_message" :href="getByName(data).play_link">
+        <span class="d-flex justify-content-around" v-if="!isMobile()">
           <span class="px-4">{{data.value}}</span>
           <b-icon icon="chevron-right" class="p-1"></b-icon>
         </span>
+        <b-icon class="p-1" v-if="isMobile()" icon="chevron-right"></b-icon>
       </a>
     </template>
   </b-table>
@@ -73,8 +78,16 @@ export default {
       required: true,
       default: []
     },
+    // is stacked table layout is changed
+    // !!stacked > is for mobile
     isStacked: {
       required: true,
+      type: Boolean,
+      default: false
+    },
+    // in mobileView together with isStacked=true, we server mobile layout
+    mobileView: {
+      required: false,
       type: Boolean,
       default: false
     }
@@ -90,12 +103,16 @@ export default {
   },
 
   methods: {
+    isMobile() {
+      return this.mobileView && !this.isStacked;
+    },
     /**
      * - render important messages as strong (#) and super strong (##)
      * example: `##- Exclusive -##` > becomes `<strong class="s1">- Exclusive -</strong>`
      * example: `#$200#` > becomes `<strong class="s2">$200</strong>`
      */
-    formatMessage({ message }) {
+    formatMessage({ message, message_short }) {
+      let new_message = this.isMobile() ? message_short : message;
       const mark = {
         1: `#1#`,
         2: `#2#`
@@ -108,14 +125,13 @@ export default {
       ];
       for (let i = 0; i < marks.length; i++) {
         // if not match ignore
-        if (!Object.values(mark).filter(z => message.includes(z)).length)
+        if (!Object.values(mark).filter(z => new_message.includes(z)).length)
           continue;
-
         const m = marks[i];
         const regx = new RegExp(m.pat);
-        message = message.replace(regx, m.rep());
+        new_message = new_message.replace(regx, m.rep());
       }
-      return message;
+      return new_message;
     },
 
     /**
@@ -144,18 +160,25 @@ export default {
 
       const formatter = (value, key, item) => {
         if (key === "review_link") return this.compaingURL(item);
-        if (key === "message") return this.formatMessage(item);
+        if (key === "message" || key === "message_short")
+          return this.formatMessage(item);
         return value;
       };
       /**
-        id: 6,
-        compaign_name: ,
-        rating: ,
-        review_link:,
-        message:,
-        play_message:
+       * example: item slot
+        id: 10,
+        compaign_name: 'William Hill',
+        compaign_img: 'william-hill-logo.jpg',
+        compaign_url: 'https://www.williamhill.com',
+        rating: 2,
+        review_link: '',
+        message: '100% Sign Up Bonus Up to #2#$200#2#',
+        message_short: 'Bonus #1#$200#1#',
+        play_message: 'Play Now',
+        play_link: "#"
        */
       return {
+        // data we display
         fields: [
           { key: "id", sortable: false, formatter },
           { key: "compaign_name", sortable: true, formatter },
