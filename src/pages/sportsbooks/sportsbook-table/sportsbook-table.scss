@@ -1,0 +1,35 @@
+
+@import "../../../libs/styles/theme";
+.read_review {
+ text-decoration: underline;
+ font-weight: bold;
+ font-size: 14px;
+}
+.b-table-stacked{
+ .read_review{
+   font-size: 13px;
+   font-weight:normal;
+   color: $gray-600!important;
+ }
+}
+
+.rating-item {
+ padding: 1px;
+ color: #fbc02d;
+ font-size: x-small;
+}
+
+
+.play_message {
+ font-size: 14px;
+ font-weight: 600;
+
+ svg {
+   font-size: 23px !important;
+ }
+}
+
+
+.html-message {
+ font-size: 17px;
+}

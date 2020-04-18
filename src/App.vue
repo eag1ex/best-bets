@@ -2,13 +2,11 @@
   <div id="app-bestbets">
     <top-nav></top-nav>
     <div id="app-container" class="container-fluid">
-      <div class="row d-flex justify-content-center">
-        <div class="col-sm-12 col-md-8 col-lg-10">
-          <transition name="fade" mode="out-in" v-cloak>
-            <router-view></router-view>
-          </transition>
-          <!-- <spinner v-bind:appLoading="!loading"></spinner> -->
-        </div>
+      <div class="d-flex justify-content-center">
+        <transition name="fade" mode="out-in" v-cloak>
+          <router-view></router-view>
+        </transition>
+        <!-- <spinner v-bind:appLoading="!loading"></spinner> -->
       </div>
     </div>
     <footer-small v-bind:loading="loading"></footer-small>

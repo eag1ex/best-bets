@@ -9,7 +9,7 @@ const sportsBooksData = [
   compaign_url: 'bet365-logo.jpg',
   rating: 5,
   review_link: 'https://www.google.com/search?q=reviewBet+365',
-  message: '##- Exclusive -## #$200# Free Bet',
+  message: '#1#- Exclusive -#1# #2#$200#2# Free Bet',
   play_message: 'Play Now',
   play_link: "#"
  },
@@ -19,7 +19,7 @@ const sportsBooksData = [
   compaign_url: 'sports-interaction-logo.jpg',
   rating: 4,
   review_link: 'https://www.google.com/search?q=Sports+Interaction',
-  message: '##- Exclusive -## Bonus up to #$200#',
+  message: '#1#- Exclusive -#1# Bonus up to #2#$200#2#',
   play_message: 'Play Now',
   play_link: "#"
  },
@@ -29,7 +29,7 @@ const sportsBooksData = [
   compaign_url: 'powerplaysports-logo.jpg',
   rating: 3,
   review_link: 'https://www.google.com/search?q=Power+Play+Sports',
-  message: '<strong>- Exclusive -</strong> <strong>$200</strong> Free Bet',
+  message: '#1#- Exclusive -#1# #2#$200#2# Free Bet',
   play_message: 'Play Now',
   play_link: "#"
  },
@@ -39,7 +39,7 @@ const sportsBooksData = [
   compaign_url: 'betway-logo.jpg',
   rating: 3,
   review_link: 'https://www.google.com/search?q=',
-  message: '100% Sign Up Bonus Up to <strong>$200</strong>',
+  message: '100% Sign Up Bonus Up to #2#$200#2#',
   play_message: 'Play Now',
   play_link: "#"
  },
@@ -49,7 +49,7 @@ const sportsBooksData = [
   compaign_url: 'spinsports-logo.jpg',
   rating: 2,
   review_link: 'https://www.google.com/search?q=',
-  message: '<strong>- Exclusive -</strong> Up to <strong>$500</strong> Free Bet',
+  message: '#1#- Exclusive -#1# Up to #2#$500#2# Free Bet',
   play_message: 'Play Now',
   play_link: "#"
  },
@@ -59,7 +59,7 @@ const sportsBooksData = [
   compaign_url: 'bodog-logo.jpg',
   rating: 5,
   review_link: 'https://www.google.com/search?q=',
-  message: '100% Sign Up Bonus Up to <strong>$200</strong>',
+  message: '100% Sign Up Bonus Up to #2#$200#2#',
   play_message: 'Play Now',
   play_link: "#"
  },
@@ -69,7 +69,7 @@ const sportsBooksData = [
   compaign_url: '888spots-logo.jpg',
   rating: 1,
   review_link: 'https://www.google.com/search?q=',
-  message: '<strong>- Exclusive -</strong> <strong>$200</strong> Free Bet',
+  message: '#1#- Exclusive -#1# #2#$200#2# Free Bet',
   play_message: 'Play Now',
   play_link: "#"
  },
@@ -79,7 +79,7 @@ const sportsBooksData = [
   compaign_url: '',
   rating: 5,
   review_link: 'https://www.google.com/search?q=',
-  message: '100% Sign Up Bonus Up to <strong>$200</strong>',
+  message: '100% Sign Up Bonus Up to #2#$200#2#',
   play_message: 'Play Now',
   play_link: "#"
  },
@@ -89,7 +89,7 @@ const sportsBooksData = [
   compaign_url: 'leovegas-logo.jpg',
   rating: 5,
   review_link: 'https://www.google.com/search?q=',
-  message: '<strong>- Exclusive -</strong> Up to <strong>$500</strong> Free Bet',
+  message: '#1#- Exclusive -#1# Up to #2#$500#2# Free Bet',
   play_message: 'Play Now',
   play_link: "#"
  },
@@ -99,7 +99,7 @@ const sportsBooksData = [
   compaign_url: 'william-hill-logo.jpg',
   rating: 2,
   review_link: 'https://www.google.com/search?q=',
-  message: '100% Sign Up Bonus Up to <strong>$200</strong>',
+  message: '100% Sign Up Bonus Up to #2#$200#2#',
   play_message: 'Play Now',
   play_link: "#"
  }

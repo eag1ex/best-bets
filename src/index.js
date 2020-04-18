@@ -22,6 +22,9 @@ import TopNav from './libs/partials/top-nav';
 import TopTitle from './libs/partials/top-title';
 import Footer from './libs/partials/footer';
 import Toggle from './libs/partials/vue-toggle';
+import SportsBooksTable from './pages/sportsbooks/sportsbook-table/sportsbook-table'
+
+Vue.component('sportsbook-table', SportsBooksTable);
 Vue.component('vue-toggle', Toggle);
 Vue.component('spinner', Spinner);
 Vue.component('top-nav', TopNav);
