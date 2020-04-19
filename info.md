@@ -31,6 +31,7 @@ https://stackedit.io/app#
 - add documentation
 - test on chrome, firefox, ie < older versions
 - css caviet support
+- (done) fix responsive issues
 
 * optional:
 

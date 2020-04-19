@@ -1,0 +1,191 @@
+@mixin top-nav-mobile-left {
+    #top-nav {
+        > .justify-content-center {
+            justify-content: unset !important;
+        }
+    }
+}
+@mixin sports-book-page-mail-title {
+    #sports-book-page {
+        .page-heading {
+          .title{
+           font-size: 29px;
+          }
+            #canada-flag {
+              display: none!important;
+            }
+            .line{
+             display: none!important;
+            }
+        }
+    }
+}
+
+
+@mixin top-nav-tablet-left {
+ #top-nav {
+     > .justify-content-center {
+         justify-content: unset !important;
+         flex-direction: row !important;
+     }
+ }
+}
+
+@mixin hide-id-small-media {
+    table#sports-book-table {
+        tr {
+            td:nth-child(1) {
+                // id
+                display: none !important;
+            }
+        }
+    }
+}
+
+
+@mixin hide-show-mobile {
+    .hide-mobile {
+        display: none !important;
+    }
+
+    .show-mobile {
+        display: block !important;
+    }
+}
+
+// overide hide when mobile and table are in crosshair
+@mixin hide-show-ipad{
+ .hide-mobile{
+  display: block !important;
+ }
+}
+
+
+@mixin tablet_table-stacked-ofset-tr {
+    table#sports-book-table.b-table-stacked {
+        tr {
+            width: 203px !important;
+        }
+    }
+}
+
+
+// responsive partial for mobile: max-width: 575.98px
+@mixin sports-book-page {
+    #sports-book-page {
+        .page-heading {
+            position: relative;
+            margin-bottom: 2.2rem !important;
+            margin-top: 0.25rem !important;
+
+            .heading {
+                margin: auto !important;
+
+                #canada-flag {
+                    background-size: 19px !important;
+                    margin-top: 0px !important;
+                    margin-bottom: 0px !important;
+                    margin-right: 12px !important;
+                    top: 4px !important;
+                    width: 21px !important;
+                }
+
+                h2 {
+                    font-size: 15px;
+                    margin-right: unset !important;
+                    float: unset;
+                }
+
+                .line {
+                    display: none !important;
+                }
+            }
+
+            button.sort-text {
+                position: absolute;
+                bottom: -41px;
+                z-index: 111;
+                right: 3px;
+                padding-right: 0px;
+                font-size: 12px !important;
+            }
+        }
+
+        #outter-table {
+            width: unset !important;
+        }
+    }
+}
+
+
+@mixin table-play_button($right:-4px){
+    td:nth-child(6) {
+        padding: 0;
+        margin: 0;
+
+        // play_link
+        a.play_message {
+            height: 100%;
+            position: relative;
+            right: $right;
+
+            border-radius: 0px 6px 6px 0px !important;
+            padding-right: 0;
+            padding-left: 0;
+            margin-right: 0;
+
+            svg {
+                margin-top: .4rem;
+                font-size: 31px !important;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@mixin sports-book-table {
+    table#sports-book-table {
+        border-spacing: 0.3em 0.7em !important;
+
+        td img {
+            height: auto !important;
+
+            // width: 99% !important;
+       
+        }
+
+        td:nth-child(1) {
+            width: 16px;
+            font-size: 23px !important;
+        }
+
+        td:nth-child(3) {
+            // rating
+            display: none !important;
+        }
+
+        td:nth-child(4) {
+            // review_link
+            .read_review {
+                font-size: 13px !important;
+            }
+        }
+
+        td:nth-child(5) {
+            line-height: 0.9em;
+
+            // message/html-message
+            .html-message {
+                font-size: 10px !important;
+                text-transform: uppercase;
+
+                strong.s1 {
+                    font-size: 17px !important;
+                    display: block;
+                }
+            }
+        }
+        
+        @include table-play_button();
+    }
+}

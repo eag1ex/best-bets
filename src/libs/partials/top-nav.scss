@@ -46,7 +46,7 @@
         -webkit-text-fill-color: transparent;
         background-size: 200% 100%;
         background-position: 100%;
-        transition: background-position 200ms ease;
+        transition: background-position 250ms ease;
         text-decoration: none; // text decorations are clipped in WebKit browsers
         &:hover {
                 background-position: 0 100%;
@@ -87,7 +87,7 @@
         word-wrap: break-word;
         white-space: initial;
         max-width: 86px;
-        line-height: 0.9em;
+        line-height: 1em;
         color: #fff;
         font-weight: 700;
         font-size: 13px;
