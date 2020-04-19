@@ -12,16 +12,15 @@
   </div>
 </template>
 <script>
+
 /* eslint-disable indent */
   /**
            *  // NOTE {APP}
            *  This is the component which declares <top-nav/>, <router-view/>, and <footer-small/> in to applilcation
            *  - Every route/page loads via the router
-           *  - once the app is loaded completely the {created} method disables the pre-loader.
-           * - we also display messages via {{alert.message}} from store alert.module
+           *  - once app is completely loaded {created()} disables pre-loader.
            */
   // import { mapState, mapActions } from 'vuex';
-
   export default {
     name: 'App',
     data: function () {
