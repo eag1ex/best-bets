@@ -1,10 +1,11 @@
-const Path = require('path');
-const Webpack = require('webpack');
-const merge = require('webpack-merge');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const common = require('./webpack.comm.js');
+/* eslint-disable */
+// const Path = require('path')
+const Webpack = require('webpack')
+const merge = require('webpack-merge')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const common = require('./webpack.comm.js')
 
 // todo
 // https://www.npmjs.com/package/mini-css-extract-plugin
@@ -56,4 +57,4 @@ module.exports = merge(common, {
 			}
 		]
 	}
-});
+})

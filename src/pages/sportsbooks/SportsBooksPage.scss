@@ -1,5 +1,8 @@
 @import "../../libs/styles/theme";
 
+.min-h{
+  min-height: 200px;
+}
 .page-heading{
   #canada-flag {
     background: #fff url("../../../src/libs/img/canada-flag.gif") no-repeat top right;

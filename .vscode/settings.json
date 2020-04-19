@@ -7,8 +7,7 @@
     "**/CVS": true,
     "**/.DS_Store": true
   },
-
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "window.zoomLevel": 0,
   "editor.tabSize": 1,
   "sasslint.enable": true,
@@ -44,7 +43,7 @@
   "eslint.autoFixOnSave": true,
   "eslint.options": {
     "extensions": [".js", ".vue"],
-    "configFile": "eslintrc.json"
+    "configFile": ".eslintrc"
   },
   "files.associations": {
     "*.vue": "html"
@@ -62,7 +61,7 @@
     "editor.formatOnSave": true
   },
   "[html]": {
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": false,
     "editor.tabSize": 2
   },
   "prettier.tslintIntegration": true,
@@ -184,5 +183,6 @@
       "name": "Vue Green",
       "value": "#42b883"
     }
-  ]
+  ],
+  "editor.wordWrap": "on"
 }

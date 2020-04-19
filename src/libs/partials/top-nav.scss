@@ -1,5 +1,4 @@
-
-@import '../styles/theme';
+@import "../styles/theme";
 
 #top-nav {
     height: 50px;
@@ -8,38 +7,42 @@
     top: 0px;
     left: 0px;
     z-index: 111;
-    .navbar-toggle-wrap{
+
+    .navbar-toggle-wrap {
         padding-top: 0.32rem;
         padding-bottom: 0.32rem;
-        .navbar-toggler{
-            border-color:transparent!important;
+
+        .navbar-toggler {
+            border-color: transparent !important;
         }
-        #navbar-toggle-collapse{
+
+        #navbar-toggle-collapse {
             position: absolute;
             z-index: 9;
             top: 49px;
             left: 0px;
             min-width: 120px;
-            box-shadow: 3px 2px 3px rgba(0,0,0,0.2);
-            border-radius: 0px 0px 4px;           
-            animation:collapsing 0.2s ease-in-out;   
-            opacity:0;       
-            .navbar-nav{   
-                a.nav-link{
+            box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
+            border-radius: 0px 0px 4px;
+            animation: collapsing 0.2s ease-in-out;
+            opacity: 0;
+
+            .navbar-nav {
+                a.nav-link {
                     padding-bottom: 3px;
                     text-transform: uppercase;
                     font-size: small;
                 }
-            }         
-            &.show{      
+            }
+
+            &.show {
                 opacity: 1;
             }
-   
         }
     }
 
     a.toolbar-link {
-        font-weight: 700!important; 
+        font-weight: 700 !important;
         background: linear-gradient(to right, $gray-500, $gray-500 50%, $white 50%);
         background-clip: text;
         -webkit-background-clip: text;
@@ -49,31 +52,34 @@
         transition: background-position 250ms ease;
         text-decoration: none; // text decorations are clipped in WebKit browsers
         &:hover {
-                background-position: 0 100%;
+            background-position: 0 100%;
         }
     }
-    a.router-link-active{
+
+    a.router-link-active {
         opacity: 0.7;
-        &:hover{
+
+        &:hover {
             opacity: 1;
         }
-        
     }
-    @keyframes collapsing{
-            from {
-                opacity: 0;
-            } 
-            to{ 
-                opacity: 1;
-            } 
+
+    @keyframes collapsing {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
     }
-    
 }
 
 .main-logo {
     #logo-icon {
         max-height: 50px;
     }
+
     #logo-text {
         &:link {
             color: #fff;
@@ -98,7 +104,6 @@
     text-transform: uppercase;
     font-weight: bold;
 }
-
 
 .div {
     position: fixed;

@@ -1,1 +1,1 @@
-export * from './sportsbooks.service' 
+export * from './sportsbooks.service'

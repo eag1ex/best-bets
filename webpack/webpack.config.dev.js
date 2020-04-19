@@ -1,8 +1,9 @@
-const Path = require('path');
-const Webpack = require('webpack');
-const merge = require('webpack-merge');
-const { PORT } = require('./config');
-const common = require('./webpack.comm.js');
+/* eslint-disable */
+const Path = require('path')
+const Webpack = require('webpack')
+const merge = require('webpack-merge')
+const { PORT } = require('./config')
+const common = require('./webpack.comm.js')
 
 module.exports = merge(common, {
 	mode: 'development',
@@ -48,9 +49,9 @@ module.exports = merge(common, {
 				loader: 'babel-loader'
 			},
 			{
-				test: /\.s[ac]ss$/i,// /\.s?css$/i,
+				test: /\.s[ac]ss$/i, // /\.s?css$/i,
 				use: ['style-loader', 'css-loader?sourceMap=true', 'sass-loader']
 			}
 		]
 	}
-});
+})

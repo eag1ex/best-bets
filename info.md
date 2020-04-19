@@ -24,13 +24,14 @@ https://stackedit.io/app#
 
 - (done) add mobile top-nav
 - (done) add javascript no click on campaign
-- add preloader
+- (done) add preloader
 - production server
+- (done) fix linting errors
 - host on heroku
 - (done) add css smooth animation
 - add documentation
-- test on chrome, firefox, ie < older versions
-- css caviet support
+- (done) test on chrome, firefox, ie < older versions
+- (ok) css caviet support
 - (done) fix responsive issues
 
 * optional:

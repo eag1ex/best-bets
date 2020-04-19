@@ -1,13 +1,14 @@
-const Path = require('path');
-const fs = require('fs');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { SERVER, API_BASE } = require('./config'); // can configure in config
+/* eslint-disable */
+const Path = require('path')
+const fs = require('fs')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { SERVER, API_BASE } = require('./config') // can configure in config
 
-const dir = './public';
+const dir = './public'
 if (!fs.existsSync(dir)) {
-	fs.mkdirSync(dir);
+	fs.mkdirSync(dir)
 }
 
 module.exports = {
@@ -28,14 +29,14 @@ module.exports = {
 	},
 
 	plugins: [
-		new CleanWebpackPlugin([ 'build' ], { root: Path.resolve(__dirname, '..') }),
-		new CopyWebpackPlugin([ { from: Path.resolve(__dirname, '../public'), to: 'public' } ]),
+		new CleanWebpackPlugin(['build'], { root: Path.resolve(__dirname, '..') }),
+		new CopyWebpackPlugin([{ from: Path.resolve(__dirname, '../public'), to: 'public' }]),
 		new HtmlWebpackPlugin({
 			template: Path.resolve(__dirname, '../src/index.html')
 		})
 	],
 	resolve: {
-		extensions: [ '.js', '.vue' ]
+		extensions: ['.js', '.vue']
 		// alias: {
 		//   '~': Path.resolve(__dirname, '../src')
 		// }
@@ -63,4 +64,4 @@ module.exports = {
 			}
 		]
 	}
-};
+}

@@ -21,7 +21,6 @@
     }
 }
 
-
 @mixin top-nav-tablet-left {
  #top-nav {
      > .justify-content-center {
@@ -172,6 +171,7 @@
         }
 
         td:nth-child(5) {
+            text-align: center!important;
             line-height: 0.9em;
 
             // message/html-message

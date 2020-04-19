@@ -1,59 +1,68 @@
 <template>
-  <span class="toggle" @click="handleClick" v-bind:class="{'selected': update}">
-    <b-icon class="selected" v-cloak v-if="update" icon="toggle-on"></b-icon>
-    <b-icon class="selected" v-cloak v-if="!update" icon="toggle-off"></b-icon>
+  <span class="toggle" :class="{'selected': update}" @click="handleClick">
+    <b-icon v-cloak v-if="update" class="selected" icon="toggle-on" />
+    <b-icon v-cloak v-if="!update" class="selected" icon="toggle-off" />
   </span>
 </template>
 <script>
+/**
+   * `vue-toggle`
+   * toggling component on/off
+   */
 export default {
-  name: "vue-toggle",
-  props: ["toggled"],
-  data: function() {
-    return {
-      update: this.toggled
-    };
-  },
-  created: function() {
-    this.update = this.props;
-  },
-  watch: {
-    update: function(val, oldVal) {
-      this.update = val;
+    name: 'VueToggle',
+    props: ['toggled'],
+    data: function () {
+        return {
+            update: this.toggled
+        }
+    },
+    watch: {
+        update: function (val, oldVal) {
+            this.update = val
+        }
+    },
+    created: function () {
+        this.update = this.props
+    },
+    methods: {
+        handleClick: function () {
+            this.update = !this.update
+            this.$emit('clickFromChild')
+        }
     }
-  },
-  methods: {
-    handleClick: function() {
-      this.update = !this.update;
-      this.$emit("clickFromChild");
-    }
-  }
-};
+}
 </script>
 
 <style lang="scss" scoped>
-.toggle {
-  font-size: 40px;
-  cursor: pointer;
-}
-.toggle-label {
-  display: inline-block;
-  padding: 2px 0 0 4px;
-  vertical-align: top;
-  font-size: 24px;
-  color: #777;
-}
-.selected {
-  animation: pulse 0.3s forwards;
-}
-@keyframes pulse {
-  from {
-    opacity: 1;
+  .toggle {
+    font-size: 40px;
+    cursor: pointer;
   }
-  50% {
-    opacity: 0.25;
+
+  .toggle-label {
+    display: inline-block;
+    padding: 2px 0 0 4px;
+    vertical-align: top;
+    font-size: 24px;
+    color: #777;
   }
-  to {
-    opacity: 1;
+
+  .selected {
+    animation: pulse 0.3s forwards;
   }
-}
+
+  @keyframes pulse {
+    from {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.25;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
 </style>

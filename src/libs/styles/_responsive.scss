@@ -1,3 +1,9 @@
+/**
+* - include all of our responsive elements here
+* - we can import mixins/extends declared in higher order 
+*/
+
+
 // small phone
 @media (max-width: 320px) {
     @include hide-id-small-media;

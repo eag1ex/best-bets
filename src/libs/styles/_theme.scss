@@ -1,6 +1,4 @@
-/* Color Preset */
-
-// color schemes
+/* Color schemes */
 // https://bootstrap-vue.js.org/docs/reference/theming/#default-theme-colors
 // https://bootstrap-vue.js.org/docs/reference/color-variants/
 
@@ -39,11 +37,12 @@ $danger: $red !default;
 $light: $gray-100 !default;
 $dark: $gray-900 !default;
 
-$theme-colors: () !default;
-$theme-colors: map-merge(("primary": $primary, "secondary": $secondary, "success": $success, "info": $info, "warning": $warning, "danger": $danger, "light": $light, "dark": $dark), $theme-colors);
-
 /// custom colors
 $red2:#e21e10;
+
+
+$theme-colors: () !default;
+$theme-colors: map-merge(("primary": $primary, "secondary": $secondary, "success": $success, "info": $info, "warning": $warning, "danger": $danger, "light": $light, "dark": $dark), $theme-colors);
 
 
 //$enable-shadows: false;
