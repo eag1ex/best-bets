@@ -1,11 +1,8 @@
 
 @import "../../../libs/styles/theme";
 
-// blackhat seo link
-.offset_anchor{
- color:rgba(0,0,0,0);
- position: absolute;
- left: -10000px;
+.compaign_name_seo{
+  cursor: auto!important; 
 }
 
 .read_review {
@@ -28,10 +25,12 @@
 }
 
 
-.play_message {
+a.play_message {
  font-size: 14px;
  font-weight: 600;
-
+  // &:hover{
+  //   animation: color_change .3s;  
+  // }
  svg {
    font-size: 23px !important;
  }
@@ -40,3 +39,8 @@
 .html-message {
  font-size: 17px;
 }
+
+// @keyframes color_change {
+//   from { background-color: $red}
+//   to { background-color: $red2 }
+// }

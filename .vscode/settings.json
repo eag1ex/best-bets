@@ -42,12 +42,12 @@
     }
   ],
   "eslint.autoFixOnSave": true,
-  "peacock.affectActivityBar": true,
-  "peacock.affectStatusBar": true,
-  "peacock.affectTitleBar": true,
   "eslint.options": {
     "extensions": [".js", ".vue"],
     "configFile": "eslintrc.json"
+  },
+  "files.associations": {
+    "*.vue": "html"
   },
   "peacock.elementAdjustments": {
     "activityBar": "lighten"
@@ -69,7 +69,15 @@
   "prettier.stylelintIntegration": true,
   "html.format.enable": true,
 
-  "commentAnchors.workspace.enabled": false,
+  "commentAnchors.workspace.excludeFiles": "**/{node_modules,.git,.idea,target,out,build,vendor}/**/*",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "commentAnchors.workspace.enabled": true,
   "attrsSorter.order": [
     "is",
     "v-for",
@@ -110,9 +118,71 @@
     "aria-.+",
     "$unknown$"
   ],
-  "commentAnchors.workspace.excludeFiles": "**/{node_modules,.git,.idea,target,out,build,vendor}/**/*",
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  }
+  "peacock.affectActivityBar": true,
+  "peacock.affectStatusBar": true,
+  "peacock.affectTitleBar": true,
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#5f5f5f",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#422c74",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "titleBar.activeBackground": "#215732",
+    "titleBar.inactiveBackground": "#21573299",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "statusBar.background": "#215732",
+    "statusBarItem.hoverBackground": "#2f7c47",
+    "statusBar.foreground": "#e7e7e7"
+  },
+  "peacock.favoriteColors": [
+    {
+      "name": "Angular Red",
+      "value": "#b52e31"
+    },
+    {
+      "name": "Auth0 Orange",
+      "value": "#eb5424"
+    },
+    {
+      "name": "Azure Blue",
+      "value": "#007fff"
+    },
+    {
+      "name": "C# Purple",
+      "value": "#68217A"
+    },
+    {
+      "name": "Gatsby Purple",
+      "value": "#639"
+    },
+    {
+      "name": "Java Blue-Gray",
+      "value": "#557c9b"
+    },
+    {
+      "name": "JavaScript Yellow",
+      "value": "#f9e64f"
+    },
+    {
+      "name": "Mandalorian Blue",
+      "value": "#1857a4"
+    },
+    {
+      "name": "Node Green",
+      "value": "#215732"
+    },
+    {
+      "name": "React Blue",
+      "value": "#00b3e6"
+    },
+    {
+      "name": "Something Different",
+      "value": "#832561"
+    },
+    {
+      "name": "Vue Green",
+      "value": "#42b883"
+    }
+  ]
 }

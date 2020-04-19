@@ -42,6 +42,9 @@ $dark: $gray-900 !default;
 $theme-colors: () !default;
 $theme-colors: map-merge(("primary": $primary, "secondary": $secondary, "success": $success, "info": $info, "warning": $warning, "danger": $danger, "light": $light, "dark": $dark), $theme-colors);
 
+/// custom colors
+$red2:#e21e10;
+
 
 //$enable-shadows: false;
 //$enable-gradients: false;

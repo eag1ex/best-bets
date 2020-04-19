@@ -13,14 +13,13 @@ div.table-not-stacked table#sports-book-table {
     overflow: hidden;
 
     tr {
-        cursor: pointer;
         transition: all .3s ease-in-out;
 
         &:hover {
-            transform: scale(1.01);
+            transform: scale(1.006);
         }
 
-        animation: unstack 0.2s ease-in alternate;
+        animation: unstack 0.1s ease-in alternate;
     }
 
     @keyframes unstack {
@@ -65,11 +64,14 @@ table#sports-book-table {
     }
 
     tr {
-        cursor: pointer;
         transition: all .3s ease-in-out;
 
         &:hover {
-            transform: scale(1.05);
+            transform: scale(1.03);
+            a.play_message{
+                background-color: $red2!important;
+                animation: color_change2 .5s ease-in-out;  
+            }
         }
 
         background: none !important;
@@ -130,7 +132,7 @@ table#sports-book-table {
             float: left;
             text-align: center !important;
             margin: .6em;
-            animation: stack 0.2s ease-in-out alternate;
+            animation: stack 0.1s ease-in-out alternate;
         }
 
         td {
@@ -199,6 +201,12 @@ table#sports-book-table {
         //
    
     }
+
+    
+        @keyframes color_change2 {
+            from { background-color: $red}
+            to { background-color: $red2 }
+        }
 
     @keyframes stack {
         0% {

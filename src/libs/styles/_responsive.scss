@@ -20,6 +20,11 @@
 
 @media (max-width: 575.98px) {
 
+    #top-nav{
+        >.justify-content-center{
+            justify-content:unset!important;
+        }
+    }
  
     .p-0-mobile {
         padding: 0;

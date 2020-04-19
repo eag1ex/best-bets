@@ -3,12 +3,8 @@
     <div class="row">
       <div class="w-100 mx-2">
         <div class="d-flex justify-content-between mt-3 mb-4 page-heading">
-          <button
-            @click="sortAlpha"
-            type="button"
-            class="btn btn-outline text-dark sort-text"
-            id="sort-alpha"
-          >Sort Alphabetically</button>
+          <button @click="sortAlpha" type="button" class="btn btn-outline text-dark sort-text" id="sort-alpha">Sort
+            Alphabetically</button>
 
           <div class="heading">
             <div class="d-flex justify-content-center mr-2">
@@ -17,12 +13,8 @@
             </div>
             <div class="line"></div>
           </div>
-          <vue-toggle
-            class="d-none d-sm-block mr-3"
-            v-bind:toggled="0"
-            label="Disabled"
-            @clickFromChild="handleToogle"
-          ></vue-toggle>
+          <vue-toggle class="d-none d-sm-block mr-3" v-bind:toggled="0" label="Disabled" @clickFromChild="handleToogle">
+          </vue-toggle>
         </div>
       </div>
     </div>
@@ -30,13 +22,8 @@
     <div class="row">
       <div id="outter-table" class="col-12 px-1">
         <!--table component-->
-        <sportsbook-table
-          ref="sportsbooktable"
-          v-if="sportsBooksTable"
-          :tableData="sportsBooksTable"
-          v-bind:isStacked="isStacked"
-          v-bind:mobileView="mobileView"
-        ></sportsbook-table>
+        <sportsbook-table ref="sportsbooktable" v-if="sportsBooksTable" :tableData="sportsBooksTable"
+          v-bind:isStacked="isStacked" v-bind:mobileView="mobileView"></sportsbook-table>
         <!--table component:end-->
       </div>
     </div>
@@ -49,95 +36,85 @@
 </template>
 
 <script>
-/**
- * resource: `https://bootstrap-vue.js.org/docs/components/table`
- * NOTE {SportsBooksPage}
- * This is a main welcome page
- *  */
-import { mapState, mapActions } from "vuex";
-//import { isEmpty, cloneDeep } from "lodash";
+  /**
+   * resource: `https://bootstrap-vue.js.org/docs/components/table`
+   * NOTE {SportsBooksPage}
+   * This is a main welcome page
+   *  */
+  import { mapState, mapActions } from "vuex";
+  //import { isEmpty, cloneDeep } from "lodash";
 
-export default {
-  name: "SportsBooksPage",
-  props: ["appStatus"],
-  data: () => ({
-    mobileView: false,
-    isStacked: false,
-    loading: true,
-    sortInx: 0,
-    sportsBooksTable: null
-  }),
-  created: function() {
-    this.getAllsportsbooks();
-    this.$store.subscribe((mutation, state) => {
-      if (mutation.type.includes("sportsBooksAction/getAllSuccess")) {
-        this.sportsBooksTable = mutation.payload;
-
-        setTimeout(() => {
-          this.loading = false;
-        }, 500);
-      }
-    });
-
-    this.detectResize();
-  },
-  methods: {
-    ...mapActions("sportsBooksAction", {
-      getAllsportsbooks: "getAll"
+  export default {
+    name: "SportsBooksPage",
+    props: ["appStatus"],
+    data: () => ({
+      mobileView: false,
+      isStacked: false,
+      loading: true,
+      sortInx: 0,
+      sportsBooksTable: null
     }),
-    detectResize() {
-      const docSize = () => {
-        const mobileWidth = 575.98;
-        if (document.body.clientWidth <= mobileWidth) {
-          this.isStacked = false;
-          this.mobileView = true;
+    created: function () {
+      this.getAllsportsbooks();
+      this.$store.subscribe((mutation, state) => {
+        if (mutation.type.includes("sportsBooksAction/getAllSuccess")) {
+          this.sportsBooksTable = mutation.payload;
+
+          setTimeout(() => {
+            this.loading = false;
+          }, 500);
         }
-        if (document.body.clientWidth > mobileWidth && !this.isStacked) {
-          this.isStacked = true;
-          this.mobileView = false;
-        }
-      };
-      window.addEventListener("resize", ev => {
-        docSize();
       });
-      docSize();
-    },
-    handleToogle() {
-      this.isStacked = !this.isStacked;
-    },
 
-    sortAlpha() {
-      try {
-        const childRef = this.$refs["sportsbooktable"].$refs;
-        if (this.sortInx === 0)
-          childRef.table.localItems.sort((a, b) =>
-            a.compaign_name.localeCompare(b.compaign_name)
-          );
-        // back to original state
-        if (this.sortInx === 1) childRef.table.refresh();
-        // or reverse order
-        // childRef.table.localItems.sort((a, b) =>
-        //   b.compaign_name.localeCompare(a.compaign_name)
-        // );
-        this.sortInx = this.sortInx == 0 ? 1 : 0;
-      } catch (err) {
-        console.error("sortAlpha", err);
-      }
+      this.detectResize();
     },
-    goTo() {
-      this.$router.push(`/home`);
-    },
+    methods: {
+      ...mapActions("sportsBooksAction", {
+        getAllsportsbooks: "getAll"
+      }),
+      detectResize() {
+        const docSize = () => {
+          const mobileWidth = 575.98;
+          if (document.body.clientWidth <= mobileWidth) {
+            this.isStacked = false;
+            this.mobileView = true;
+          }
+          if (document.body.clientWidth > mobileWidth && !this.isStacked) {
+            this.isStacked = true;
+            this.mobileView = false;
+          }
+        };
+        window.addEventListener("resize", ev => {
+          docSize();
+        });
+        docSize();
+      },
+      handleToogle() {
+        this.isStacked = !this.isStacked;
+      },
 
-    goToItem(item) {
-      if (item.id) {
-        console.log("execute goto location", item);
-        //  this.$router.push(`/item/${item.id}`);
+      sortAlpha() {
+        try {
+          const childRef = this.$refs["sportsbooktable"].$refs;
+          if (this.sortInx === 0)
+            childRef.table.localItems.sort((a, b) =>
+              a.compaign_name.localeCompare(b.compaign_name)
+            );
+          // back to original state
+          if (this.sortInx === 1) childRef.table.refresh();
+          // or reverse order
+          // childRef.table.localItems.sort((a, b) =>
+          //   b.compaign_name.localeCompare(a.compaign_name)
+          // );
+          this.sortInx = this.sortInx == 0 ? 1 : 0;
+        } catch (err) {
+          console.error("sortAlpha", err);
+        }
       }
     }
-  }
-};
+  };
 </script>
 
 <style lang="scss" scoped>
-@import "./SportsBooksPage";
+  @import "./SportsBooksPage";
 </style>

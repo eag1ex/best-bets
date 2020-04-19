@@ -6,9 +6,7 @@ import Vue from 'vue';
 /// extentions
 
 
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-import { DropdownPlugin, TablePlugin } from 'bootstrap-vue'
-
+import { BootstrapVue, IconsPlugin, DropdownPlugin, TablePlugin, NavbarPlugin } from 'bootstrap-vue'
 
 import './libs/styles/index.scss';
 import { store } from './libs/_store';
@@ -24,6 +22,8 @@ import Footer from './libs/partials/footer';
 import Toggle from './libs/partials/vue-toggle';
 import SportsBooksTable from './pages/sportsbooks/sportsbook-table/sportsbook-table'
 
+
+
 Vue.component('sportsbook-table', SportsBooksTable);
 Vue.component('vue-toggle', Toggle);
 Vue.component('spinner', Spinner);
@@ -32,6 +32,8 @@ Vue.component('top-title', TopTitle);
 Vue.component('footer-small', Footer);
 // end
 
+
+Vue.use(NavbarPlugin);
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 Vue.use(DropdownPlugin)
