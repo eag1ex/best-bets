@@ -93,7 +93,14 @@ export default {
             const items = document.querySelectorAll(`.compaign_name_seo`) || []
             if (!items.length) return
             // eslint-disable-next-line no-return-assign
-            items.forEach((el, i) => el.href = '#')
+            items.forEach((el, i) => {
+                el.addEventListener('click', (ev) => {
+                    ev.stopPropagation()
+                    ev.preventDefault()
+                    return false
+                }, false)
+                // el.href = '#'
+            })
         },
 
         /**
