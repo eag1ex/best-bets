@@ -3,6 +3,12 @@
 
 .compaign_name_seo{
   cursor: auto!important; 
+  
+  p.compaign_name_seo_text{
+    text-indent: -10000em;
+    position: absolute;
+    color: #fff;
+  }
 }
 
 .read_review {
@@ -19,7 +25,7 @@
 }
 
 .rating-item {
- padding: 1px;
+ padding: 0px;
  color: #fbc02d;
  font-size: x-small;
 }

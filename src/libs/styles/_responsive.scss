@@ -85,6 +85,7 @@ and (orientation: landscape) {
  
     @include top-nav-mobile-left;
     @include hide-show-mobile; 
+   // @include table-play_button()
 }
 
 @media only screen 

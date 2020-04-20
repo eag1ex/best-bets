@@ -58,7 +58,9 @@
 
     a.router-link-active {
         opacity: 0.7;
-
+        &.router-link-exact-active{
+            opacity: 1;
+        }
         &:hover {
             opacity: 1;
         }

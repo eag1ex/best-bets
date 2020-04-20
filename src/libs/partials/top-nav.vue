@@ -29,7 +29,7 @@
 
       <div class="d-none d-sm-none d-md-block hide-mobile">
         <div class="ml-2 mt-1 d-flex align-items-center">
-          <router-link v-for="list in menuList" :key="list.name" class="text-white p-2 toolbar-link mx-1" to="list.link">
+          <router-link v-for="list in menuList" :key="list.name" class="text-white p-2 toolbar-link mx-1" :to="list.link">
             {{ list.name }}
           </router-link>
         </div>

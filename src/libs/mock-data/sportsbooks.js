@@ -88,9 +88,9 @@ let _sportsBooksData = [
     },
     {
         id: 8,
-        compaign_name: 'IO Sports',
-        compaign_url: 'https://sportsbet.io',
-        compaign_img: '',
+        compaign_name: '10BET For the bettor.',
+        compaign_url: 'https://www.10bet.com/sports/',
+        compaign_img: '10bet-logo.jpg',
         rating: 5,
         review_link: '',
         message: '100% Sign Up Bonus Up to #2#$200#2#',

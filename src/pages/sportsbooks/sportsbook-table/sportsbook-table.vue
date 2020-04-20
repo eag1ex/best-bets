@@ -9,9 +9,10 @@
     </template>
 
     <template v-slot:cell(compaign_name)="data">
-      <a class="compaign_name_seo" :name="data.value +' | Casinos'" :href="getByName(data).compaign_url"><img
-        :src="'./src/libs/img/'+getByName(data).compaign_img" :alt="data.value"
-      ></a>
+      <a class="compaign_name_seo" :name="data.value" :href="getByName(data).compaign_url">
+        <img
+          :src="'./src/libs/img/'+getByName(data).compaign_img" :alt="data.value"
+        ><p class="compaign_name_seo_text">{{ data.value }}</p></a>
     </template>
 
     <template v-slot:cell(rating)="data">
