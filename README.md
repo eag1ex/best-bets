@@ -4,7 +4,7 @@
 
 #### Overview
 The application displays list of recommended casino websites by score.
-It is build with Vue/Vuex 2, data flow is handled by Vuex Store, it is staged through fake bakend server to simulate REST/GET. 
+It is build with Vue/Vuex 2, data flow is managed by Vuex Store, and handled through fake bakend server to simulate REST/GET. 
 
 * Website is production ready
 * Live REST/GET option ready 
