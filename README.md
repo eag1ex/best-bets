@@ -21,14 +21,13 @@ It is build with Vue/Vuex 2, data flow is handled by Vuex Store, it is staged th
 - ES6, MVC, Vue/Vuex 2, Bootstrap Vue, Bootstrap, Webpack, Mock-backend, SCSS, eslint
 
 #### BESTBET Live Demo
-- Live demo is hosted on heroku node.js server:
+- Live demo is hosted on heroku node.js server _Server has a timeout limit_:
 
 ```
 access:
 https://mysterious-brushlands-37485.herokuapp.com/login
 login: eaglex
 password: eaglex
-## _Server has a timeout limit_
 ```
 
 #### Start/install application
