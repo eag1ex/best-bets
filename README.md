@@ -13,6 +13,9 @@ It is build with Vue/Vuex 2, data flow is handled by Vuex Store, it is staged th
 - Custom Google search query for `reviews`
 - Custom text display on mobile layout, using RegExp
 
+##### Deadline
+* Project build in 4 days.
+
 #### Stack
 - ES6, MVC, Vue/Vuex 2, Bootstrap Vue, Bootstrap, Webpack, Mock-backend, SCSS, eslint
 
