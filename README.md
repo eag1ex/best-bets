@@ -36,7 +36,7 @@ $/ npm install
 $/ npm start # will run dev server and open browser
 $/ npm run build # will optimize all files for production
 # you may need to install/ rebuild node-sass,
-# if problems refer "engines": { < in package.json, remove it and try again.
+# have problems... refer to "engines": { < in package.json, remove it and try again.
 ```
 
 ##### Requirements
