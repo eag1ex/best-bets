@@ -132,8 +132,9 @@ export default {
 
             const base = `https://www.google.com/search`
             const as_epq = compaign_name.replace(/ /gi, '+') // make exact search results
+            const q = `review`
             const lr = `lang_en` // search results only in english
-            return `${base}?as_epq=${as_epq}&lr=${lr}`
+            return `${base}?as_epq=${as_epq}&lr=${lr}&q=${q}`
         },
 
         getByName({ item }) {

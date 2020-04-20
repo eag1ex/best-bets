@@ -9,6 +9,8 @@ It is build with Vue/Vuex 2, data flow is handled by Vuex Store, it is staged th
 - Live REST/GET option ready 
 - Integrated with Vuex start table
 - Code is eslinted
+- Mobile responsive
+- Custom Google search query for `reviews`
 
 #### Stack
 - ES6, MVC, Vue/Vuex 2, Bootstrap Vue, Bootstrap, Webpack, Mock-backend, SCSS, eslint
