@@ -5,13 +5,13 @@
 #### Overview
 The application displays list of recommended casino websites, by listing score.
 It is build with Vue/Vuex 2, data flow is handled by Vuex Store, it is staged through fake bakend server to simulate REST/GET. 
- - Website is production ready
- - Live REST/GET option ready 
- - Integrated with Vuex smart table
- - Code is eslinted
- - Mobile responsive
- - Custom Google search query for `reviews`
- - Custom text display on mobile layout, using RegExp
+* Website is production ready
+* Live REST/GET option ready 
+* Integrated with Vuex smart table
+* Code is eslinted
+* Mobile responsive
+* Custom Google search query for `reviews`
+* Custom text display on mobile layout, using RegExp
 
 ##### Deadline
 * Project build in 4 days.
