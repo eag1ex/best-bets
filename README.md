@@ -74,10 +74,10 @@ externals: {
   **vue module components:** `/pages`
   **services:** `/libs/_services/**`
   **vue store module:** `/libs/_store/`
-  **mock data:** `/libs/mock-data` < _initial data for api/fake-backend.js_
+  **mock data:** `/libs/mock-data` 
   **fake-backend api:** `/libs/fake-backend.js`
   **/\/index.js:** `every libs service/module has index.js for export`
-  **main ./index.js:** `root of application where all modules and plugins are imported in to.`
+  **main ./index.js:** `root of application where all modules and plugins are imported`
   **./libs/router.js:** `all components are imported to this file`
   **./libs/styles** `all style/css plugins are maintained here and exported via index.scss, except for some of independant styles of components.`
 
