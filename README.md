@@ -12,7 +12,7 @@ It is build with Vue/Vuex 2, data flow is managed by Vuex Store, and handled thr
 * Code is eslinted
 * Mobile responsive
 * Custom Google search query for `reviews`
-* Custom text display on mobile layout, using RegExp
+* Alternative text display on mobile layout, using RegExp
 
 ##### Deadline
 * Project build in 4 days.
