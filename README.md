@@ -84,6 +84,10 @@ externals: {
 #### TESTS
 - Tested on lates Chrome and Firefox
 
+#### TODO 
+- add load more on action click
+- add better support for CSS3 on cross browser, add `Compass`
+
 #### Bugs
 - let me know.
 
