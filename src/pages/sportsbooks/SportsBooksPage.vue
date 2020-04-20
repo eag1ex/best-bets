@@ -44,7 +44,6 @@
 
 <script>
 /**
-   * resource: `https://bootstrap-vue.js.org/docs/components/table`
    * NOTE {SportsBooksPage}
    * This is a main welcome page
    *  */

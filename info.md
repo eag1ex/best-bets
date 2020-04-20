@@ -10,8 +10,6 @@ https://vuematerial.io/getting-started/
 bootstrap 4
 https://getbootstrap.com/docs/4.0/getting-started/introduction/
 
-typescript
-https://frontendsociety.com/writing-single-file-components-vue-files-in-typescript-vue-class-component-vs-vue-extend-c5c1d8e47b7
 
 css preloaders
 https://freefrontend.com/css-loaders/
@@ -21,7 +19,6 @@ edit md file
 https://stackedit.io/app#
 
 ### todo
-
 - (done) add mobile top-nav
 - (done) add javascript no click on campaign
 - (done) add preloader

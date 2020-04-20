@@ -1,24 +1,27 @@
-## BESTBET Application
+## BESTBETS Application
 
 #### - [ Developed by Eaglex ](http://eaglex.net)
 
 #### Overview
 The application displays list of recommended casino websites, by listing score.
 It is build with Vue/Vuex 2, data flow is handled by Vuex Store, it is staged through fake bakend server to simulate REST/GET. 
- - Website is production ready
- - Live REST/GET option ready 
+- Website is production ready
+- Live REST/GET option ready 
+- Integrated with Vuex start table
+- Code is eslinted
 
 #### Stack
-- ES6, MVC, Vue/Vuex 2, Bootstrap Vue, Bootstrap, Webpack, Mock-backend, SCSS.
+- ES6, MVC, Vue/Vuex 2, Bootstrap Vue, Bootstrap, Webpack, Mock-backend, SCSS, eslint
 
 #### BESTBET Live Demo
-- Live demo is hosted on heroku node.js. _Server has a timeout limit_, you may have to loggin again:
+- Live demo is hosted on heroku node.js, you may have to loggin again:
 
 ```
 access:
 https://mysterious-brushlands-37485.herokuapp.com/login
 login: eaglex
 password: eaglex
+## _Server has a timeout limit_
 ```
 
 #### Start/install application

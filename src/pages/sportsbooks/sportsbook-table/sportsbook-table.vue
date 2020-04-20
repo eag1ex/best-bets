@@ -43,7 +43,8 @@
   </b-table>
 </template>
 <script>
-/**
+
+/**  * resource: `https://bootstrap-vue.js.org/docs/components/table`
      * own sportsbook-table component
      * requires `{tableData}` for binding
      */
