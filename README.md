@@ -3,46 +3,42 @@
 #### - [ Developed by Eaglex ](http://eaglex.net)
 
 #### Overview
-
--
+The application displays list of recommended casino websites, by listing score.
+It is build with Vue/Vuex 2, data flow is handled by Vuex Store, it is staged through fake bakend server to simulate REST/GET. 
+ - Website is production ready
+ - Live REST/GET option ready 
 
 #### Stack
-
-- ES6, MVC, Vue.js v2 with Vuex, bootstrap-vue, Lodash, Webpack, Mock-backend
+- ES6, MVC, Vue/Vuex 2, Bootstrap Vue, Bootstrap, Webpack, Mock-backend, SCSS.
 
 #### BESTBET Live Demo
-
 - Live demo is hosted on heroku node.js. _Server has a timeout limit_, you may have to loggin again:
 
 ```
 access:
-https://...
-login: BESTBET
-password: BESTBET
-
+https://mysterious-brushlands-37485.herokuapp.com/login
+login: eaglex
+password: eaglex
 ```
 
 #### Start/install application
-
 ```
 $/ npm install
 $/ npm start # will run dev server and open browser
 $/ npm run build # will optimize all files for production
 # you may need to install/ rebuild node-sass,
-# if problems refer to "engines": { < in package.json or remove it and try again.
+# if problems refer "engines": { < in package.json, remove it and try again.
 ```
 
 ##### Requirements
-
 ```
 $/ npm install webpack -g
 $/ npm install -g vue-cli # not too sure if required
 ```
 
-- install `eslint` for VSC
+- (optional) install `eslint` for VSC Recommended
 
 #### Webpack
-
 - There are 4 files common, development, production, and config.
 
 ```
@@ -57,20 +53,14 @@ externals: {
 },
 ```
 
-#### RESt/API
-
-- you can switch base api, to use either `LOCAL or REAL` in development environment.
-
-##### mock-fake-backend
-
-- to enable go to `webpack\config.js` > set `useServerInDev = "LOCAL"`, then run `npm start`.
-
-##### LIVE-API
-
+#### REST/API
+- there is option for `REAL` api switch in webpack configuration, when it becomes available
 - to enable go to `webpack\config.js` > set `useServerInDev = "REAL"`, then run `npm start`.
 
-#### Hierarchy
+##### mock-fake-backend
+- to enable go to `webpack\config.js` > set `useServerInDev = "LOCAL"`, then run `npm start`.
 
+#### Hierarchy
 - Application structure
   **vue module components:** `/pages`
   **services:** `/libs/_services/**`
@@ -83,9 +73,9 @@ externals: {
   **./libs/styles** `all style/css plugins are maintained here and exported via index.scss, except for some of independant styles of components.`
 
 #### TESTS
-
 - Tested on lates Chrome and Firefox
 
 #### Bugs
+- let me know.
 
 #### Thank you
