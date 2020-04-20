@@ -10,7 +10,7 @@ npm-debug.log*
 node_modules
 public
 typings
-build
+build 
 # Optional npm cache directory
 .npm
 info.txt
