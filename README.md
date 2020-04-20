@@ -90,5 +90,6 @@ externals: {
 
 #### Bugs
 - let me know.
+- _not sure if this qualifies as bug_, but images need to be imported manualy from `/src/libs/img` to `build/src/img` after build complete, _i havent configured webpack to run another process for this._
 
 #### Thank you
