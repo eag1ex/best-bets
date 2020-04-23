@@ -18,7 +18,7 @@ It is build with Vue/Vuex 2, data flow is managed by Vuex Store, and handled thr
 * Project build in 4 days.
 
 #### Stack
-- ES6, MVC, Vue/Vuex 2, Bootstrap Vue, Bootstrap, Webpack, Mock-backend, SCSS, eslint
+- ES6, MVC, Vue/Vuex 2, Bootstrap Vue, Bootstrap, Webpack, Mock-backend, SCSS, Compass, eslint
 
 #### BESTBET Live Demo
 - Live demo is hosted on heroku node.js server (_server has timeout limit_):
@@ -86,7 +86,6 @@ externals: {
 
 #### TODO 
 - (add) load more on action click
-- (add) better support for CSS3 on cross browser, with `Compass`
 
 #### Bugs
 - let me know.

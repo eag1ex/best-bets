@@ -115,7 +115,13 @@
         }
     }
 }
-
+@mixin _box-shadow(){
+    box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.3) !important;
+    -webkit-box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.3) !important;
+    -moz-box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.3) !important;
+    -ms-box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.3) !important;
+    -o-box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.3) !important;
+}
 
 @mixin table-play_button($right:-4px){
     td:nth-child(6) {
@@ -127,8 +133,8 @@
             height: 100%;
             position: relative;
             right: $right;
-
-            border-radius: 0px 6px 6px 0px !important;
+            @include border-radius(0px 6px 6px 0px!important); 
+           // border-radius: 0px 6px 6px 0px !important;
             padding-right: 0;
             padding-left: 0;
             margin-right: 0;
