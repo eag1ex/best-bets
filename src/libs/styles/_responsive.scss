@@ -5,11 +5,11 @@
 
 
 // small phone
-@media (max-width: 320px) {
+@media (max-device-width: 320px) {
     @include hide-id-small-media;
 }
 
-@media (max-width: 575.98px) {
+@media (max-device-width: 575.98px) {
 
     @include top-nav-mobile-left;
  
