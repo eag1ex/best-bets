@@ -115,13 +115,6 @@
         }
     }
 }
-@mixin _box-shadow(){
-    box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.3) !important;
-    -webkit-box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.3) !important;
-    -moz-box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.3) !important;
-    -ms-box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.3) !important;
-    -o-box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.3) !important;
-}
 
 @mixin table-play_button($right:-4px){
     td:nth-child(6) {
@@ -194,4 +187,96 @@
         
         @include table-play_button();
     }
+}
+
+
+/**
+    transitions and animation for `sportsbook-table`
+**/
+@mixin  funky-table-tr-transitions{
+    &.initial_row{
+        &.table-row_even{          
+            @include cus-animation-even(0.3s ease-in-out 0.3s);
+            opacity: 1;
+        }
+    
+        &.table-row_odd {
+            @include cus-animation-odd(0.3s ease-in-out 0.3s);
+            opacity: 1;
+        }
+        transition: all .5s ease-in-out;
+    }
+    &.tr-sorting{
+        &.table-row_even{          
+            @include cus-animation-even(0.3s ease-in-out 0s);
+            opacity: 1;
+        }
+    
+        &.table-row_odd {
+            @include cus-animation-odd(0.3s ease-in-out 0s);
+            opacity: 1;
+        }
+        transition: all .2s ease-in-out;
+    }    
+}
+
+
+
+@mixin table-hide-tr-if{
+    .invisable-table{
+        tr{
+            opacity: 0;
+        }
+    }
+}
+
+/**
+    deco and animations
+    3s linear 1s infinite running slidein;
+**/
+
+@mixin cus-animation-odd($animation){
+    @include animation($animation slidel!important);
+
+    @keyframes slidel {
+        0%{
+            opacity: 0;
+            transform: translateX(-200px); 
+        }
+        40%{
+            opacity: .5;
+        } 
+            
+        100%{ 
+            opacity: 1;
+            transform: translateX(0px); }
+      }
+}
+@mixin cus-animation-even($animation) {
+    @include animation($animation slider !important);
+
+    @keyframes slider {
+        0% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+
+        40% {
+            opacity: .5;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    }
+}
+
+
+@mixin _box-shadow(){
+    box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.3) !important;
+    -webkit-box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.3) !important;
+    -moz-box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.3) !important;
+    -ms-box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.3) !important;
+    -o-box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.3) !important;
 }

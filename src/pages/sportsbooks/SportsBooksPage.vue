@@ -36,7 +36,7 @@
     </div>
     <div class="row">
       <div class="d-flex justify-content-center mt-1 col">
-        <a id="view-all" class="text-center text-primary" href="#">View All Bettings Sites</a>
+        <a id="view-all" class="text-center text-primary" :href="'#'">View All Bettings Sites</a>
       </div>
     </div>
   </div>
@@ -96,23 +96,50 @@ export default {
         },
         handleToogle() {
             this.isStacked = !this.isStacked
+
+            const tableAddInitialClass = () => {
+                const table = document.querySelector('#sports-book-table')
+                if (!table) return
+                const trs = table.querySelectorAll(`tr`)
+                trs.forEach((el, i) => {
+                    if (!el.classList.contains('initial_row')) {
+                        el.classList.add('initial_row')
+                    }
+                })
+            }
+            tableAddInitialClass()
         },
 
         sortAlpha() {
             try {
+                const tableTRtoggleClass = () => {
+                    const table = document.querySelector('#sports-book-table')
+                    if (!table) return
+
+                    const trs = table.querySelectorAll(`tr`)
+                    trs.forEach((el, i) => {
+                        // console.log('el.classList', el.classList)
+                        if (el.classList.contains('tr-sorting')) {
+                            el.classList.remove('tr-sorting')
+                        } else {
+                            el.classList.add('tr-sorting')
+                        }
+                        // just remove if its there or not
+                        el.classList.remove('initial_row')
+                    })
+                }
                 const childRef = this.$refs['sportsbooktable'].$refs
                 if (this.sortInx === 0) {
                     childRef.table.localItems.sort((a, b) =>
                         a.compaign_name.localeCompare(b.compaign_name)
                     )
                 }
-                // back to original state
                 if (this.sortInx === 1) childRef.table.refresh()
-                // or reverse order
-                // childRef.table.localItems.sort((a, b) =>
-                //   b.compaign_name.localeCompare(a.compaign_name)
-                // );
                 this.sortInx = this.sortInx === 0 ? 1 : 0
+
+                setTimeout(() => {
+                    tableTRtoggleClass()
+                }, 200)
             } catch (err) {
                 console.error('sortAlpha', err)
             }

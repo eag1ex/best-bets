@@ -1,5 +1,5 @@
 <template id="sportsbook-table">
-  <b-table v-if="tableData" id="sports-book-table" ref="table" class="px-0 mx-0"
+  <b-table v-if="tableData" id="sports-book-table" ref="table" class="invisable-table px-0 mx-0"
            :class="{'table-not-stacked': !isStacked}" small no-collapse primary-key="id" :no-border-collapse="true"
            :bordered="false" :outlined="false" :borderless="true" caption-top responsive striped hover :stacked="isStacked"
            :tbody-transition-props="transProps" :fields="sportsBooksTableData.fields" :items="sportsBooksTableData.items"
@@ -80,13 +80,34 @@ export default {
     created: function () {
         this.sportsBooksTableData = this.bTable(this.tableData)
     },
+    updated() {
+        this.showTable()
+    },
     mounted: function () {
         this.disableClick()
+        this.showTable()
     },
 
     methods: {
         isMobile() {
             return this.mobileView && !this.isStacked
+        },
+
+        showTable() {
+            setTimeout(() => {
+                let el = document.querySelector('#sports-book-table')
+
+                if (el.classList.contains('invisable-table')) {
+                    el.classList.remove('invisable-table')
+                    console.log('removed invisable-table')
+                } else {
+                    let el2 = document.querySelector('#sports-book-table').parentNode
+                    if (el2.classList.contains('invisable-table')) {
+                        el2.classList.remove('invisable-table')
+                        console.log('removed invisable-table')
+                    }
+                }
+            }, 340)
         },
 
         disableClick() {
@@ -155,6 +176,8 @@ export default {
         bTable(data = []) {
             if (!(data || []).length) return []
 
+            const isOdd = num => num % 2
+
             const formatter = (value, key, item) => {
                 if (key === 'review_link') return this.compaingURL(item)
                 if (key === 'message' || key === 'message_short') { return this.formatMessage(item) }
@@ -183,8 +206,13 @@ export default {
                     { key: 'message', sortable: false, formatter },
                     'play_message',
                 ],
-                items: data.map(z => {
+                items: data.map((z, i) => {
                     z.isActive = true
+                    if (isOdd(i)) z._rowVariant = 'row_odd'
+                    else z._rowVariant = 'row_even'
+
+                    /// this is removed when calling `sortAlpha` from parent component
+                    z._rowVariant = `${z._rowVariant} initial_row`
                     return z
                 }),
             }

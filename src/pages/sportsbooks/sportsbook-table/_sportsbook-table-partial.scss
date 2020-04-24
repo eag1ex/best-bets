@@ -37,7 +37,10 @@ div.table-not-stacked table#sports-book-table {
     }
 }
 
+@include table-hide-tr-if;
 table#sports-book-table {
+
+
     overflow: hidden;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -63,8 +66,12 @@ table#sports-book-table {
         }
     }
 
+
+   
     tr {
-        transition: all .3s ease-in-out;
+        
+       position: relative;
+       @include funky-table-tr-transitions;
 
         &:hover {
             transform: scale(1.03);
@@ -82,6 +89,7 @@ table#sports-book-table {
         width: 100%;
 
         td {
+            
             height: 60px;
             vertical-align: middle;
         }
@@ -124,6 +132,8 @@ table#sports-book-table {
             max-width: 140px;
         }
     }
+
+
 
     &.b-table-stacked {
         tr {

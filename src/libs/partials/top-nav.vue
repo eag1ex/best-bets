@@ -11,7 +11,7 @@
 
         <b-collapse id="navbar-toggle-collapse" class="bg-dark" is-nav>
           <b-navbar-nav class="ml-auto px-3 py-2">
-            <b-nav-item v-for="list in menuList" :key="list.name" class="py-0" :href="list.link">
+            <b-nav-item v-for="list in menuList" :key="list.name" router-tag="a" target="_self" class="py-0" :to="list.link">
               {{ list.name }}
             </b-nav-item>
           </b-navbar-nav>
