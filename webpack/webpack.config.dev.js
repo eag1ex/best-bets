@@ -19,7 +19,7 @@ module.exports = merge(common, {
 		}
 	},
 	devServer: {
-		open: 'chrome',
+		// open: 'chrome',
 		port: PORT,
 		historyApiFallback: {
 			hot: true,

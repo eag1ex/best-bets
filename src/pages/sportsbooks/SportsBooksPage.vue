@@ -42,13 +42,14 @@
   </div>
 </template>
 
-<script>
+<script>  
 /**
    * NOTE {SportsBooksPage}
    * This is a main welcome page
    *  */
-import { mapActions } from 'vuex'
-
+import { mapActions } from 'vuex' 
+//import {isArray} from "x-utils-es/umd"
+import xdsipatcher from 'x-dispatcher/umd'
 export default {
     name: 'SportsBooksPage',
     props: ['appStatus'],
@@ -69,7 +70,7 @@ export default {
                 // }, 2000);
             }
         })
-
+        console.log('what is xDsipatcher',xdsipatcher())
         this.detectResize()
     },
     methods: {

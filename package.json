@@ -2,6 +2,7 @@
   "name": "best-bets",
   "version": "1.0.0",
   "scripts": {
+    "postinstall": "npm i --save-dev  --unsafe-perm node-sass@4.9.4",
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js  --colors",
     "start": "cross-env NODE_ENV=development webpack-dev-server  --config webpack/webpack.config.dev.js"
   },
@@ -56,13 +57,11 @@
     "vue-loader": "^14.2.3",
     "vue-router": "^3.0.2",
     "vue-template-compiler": "^2.5.16",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "x-dispatcher": "^1.0.0",
+    "x-utils-es": "^1.2.4"
   },
   "engines": {
-    "vuex": ">=3.0.1",
-    "vue": ">=2.5.16",
-    "node": ">=10.14.2",
-    "node-sass": ">=4.9.0",
-    "npm": ">=6.5.0"
+    "node": "10"
   }
 }
