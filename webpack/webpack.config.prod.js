@@ -35,7 +35,9 @@ module.exports = merge(common, {
 	},
 	plugins: [
 		new Webpack.DefinePlugin({
-			'process.env.NODE_ENV': JSON.stringify('production')
+			'process.env.NODE_ENV': JSON.stringify('production'),
+			// so the base path will be set accordingly for github pages, on the router
+			'process.env.publicPath': JSON.stringify('best-bets')  
 		}),
 		new Webpack.optimize.ModuleConcatenationPlugin(),
 		new MiniCssExtractPlugin({

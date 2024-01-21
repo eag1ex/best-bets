@@ -2,9 +2,20 @@
 
 #### - [ Developed by Eaglex ](http://eaglex.net)
 
+#### <span style="color:red">Latest updates</span>
+
+<i>Project demo is now available on github pages: </i>
+
+[ >> best-bets <<](https://eag1ex.github.io/best-bets)
+<br>
+<img  src="./screens/bestbets-3.jpg" width='400'/>
+
+<br>
+
+
 #### Overview
 The application displays list of recommended casino websites by score.
-It is build with Vue/Vuex 2, data flow is managed by Vuex Store, and handled through fake bakend server to simulate REST/GET. 
+It is build with Vue/Vuex 2, data flow is managed by Vuex Store, and handled through fake backend server to simulate REST/GET. 
 
 * Website is production ready
 * Live REST/GET option ready 

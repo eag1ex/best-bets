@@ -7,8 +7,10 @@ import Router from 'vue-router'
 
 import Page404 from '../pages/404/404Page'
 import SportsBooksPage from '../pages/sportsbooks/SportsBooksPage'
+console.log('process.env.publicPath', process.env.publicPath)
 Vue.use(Router)
 export const router = new Router({
+    ...(process.env.publicPath ? { base: process.env.publicPath } : {}),
     mode: 'history',
     routes: [
         { path: '/sportsbooks', component: SportsBooksPage },

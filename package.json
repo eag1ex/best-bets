@@ -4,7 +4,9 @@
   "scripts": {
     "postinstall": "npm i --save-dev  --unsafe-perm node-sass@4.9.4",
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js  --colors",
-    "start": "cross-env NODE_ENV=development webpack-dev-server  --config webpack/webpack.config.dev.js"
+    "start": "cross-env NODE_ENV=development webpack-dev-server  --config webpack/webpack.config.dev.js",
+    "deploy:github": "gh-pages -d build",
+    "serve": "serve"
   },
   "author": "eaglex",
   "url": "http://eaglex.net",
@@ -34,6 +36,7 @@
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
+    "@types/gh-pages": "^6.1.0",
     "@vue/cli-plugin-eslint": "^3.4.1",
     "babel-core": "^6.26.0",
     "babel-eslint": "^10.0.1",
@@ -46,6 +49,7 @@
     "compass-mixins": "^0.12.10",
     "copy-webpack-plugin": "^4.5.4",
     "cross-env": "^5.2.0",
+    "gh-pages": "^6.1.1",
     "html-webpack-plugin": "^4.0.0-beta.2",
     "mini-css-extract-plugin": "^0.4.5",
     "node-sass": "^4.9.4",
