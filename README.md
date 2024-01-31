@@ -2,15 +2,6 @@
 
 #### - [ Developed by Eaglex ](http://eaglex.net)
 
-#### <span style="color:red">Latest updates</span>
-
-<i>Project demo is now available on github pages: </i>
-
-[ >> best-bets <<](https://eag1ex.github.io/best-bets)
-<br>
-<img  src="./screens/bestbets-3.jpg" width='400'/>
-
-<br>
 
 
 #### Overview
@@ -25,6 +16,22 @@ It is build with Vue/Vuex 2, data flow is managed by Vuex Store, and handled thr
 * Custom Google search query for `reviews`
 * Alternative text display on mobile layout, using RegExp
 
+<br>
+
+### <span style="color:red">Latest updates</span>
+
+<i>Project demo is now available on github pages: </i>
+
+[ >> best-bets <<](https://eag1ex.github.io/best-bets)
+<br>
+<img  src="./screens/bestbets-3.jpg" width='400'/>
+
+<br>
+
+
+
+
+
 ##### Deadline
 * Project build in 4 days.
 
@@ -34,24 +41,27 @@ It is build with Vue/Vuex 2, data flow is managed by Vuex Store, and handled thr
 #### BESTBET Live Demo
 - Live demo is hosted on heroku node.js server (_server has timeout limit_):
 
-```
-access:
-https://mysterious-brushlands-37485.herokuapp.com/login
-login: eaglex
-password: eaglex
+```sh
+## OLD, INACTIVE
+# access:
+# https://mysterious-brushlands-37485.herokuapp.com/login
+# login: eaglex
+# password: eaglex
 ```
 
 #### Start/install application
-```
+
+```sh
 $/ npm install
 $/ npm start # will run dev server and open browser
 $/ npm run build # will optimize all files for production
 # you may need to install/ rebuild node-sass,
-# have problems... refer to "engines": { < in package.json, remove it and try again.
+# have problems... refer to "engines":  < in package.json, remove it and try again.
 ```
 
 ##### Requirements
-```
+
+```sh
 $/ npm install webpack -g
 $/ npm install -g vue-cli # not too sure if required
 ```
@@ -61,9 +71,9 @@ $/ npm install -g vue-cli # not too sure if required
 #### Webpack
 - There are 4 files common, development, production, and config.
 
-```
+```js
 externals: {
-// this is injected into the application dynamicly, and api/base can be changed per build environment.
+// this is injected into the application dynamically, and api/base can be changed per build environment.
 // global app config object
 	config: JSON.stringify({
 			apiUrl: API_BASE(),
@@ -90,7 +100,7 @@ externals: {
   **/\/index.js:** `every libs service/module has index.js for export`
   **main ./index.js:** `root of application where all modules and plugins are imported`
   **./libs/router.js:** `all components are imported to this file`
-  **./libs/styles** `all style/css plugins are maintained here and exported via index.scss, except for some of independant styles of components.`
+  **./libs/styles** `all style/css plugins are maintained here and exported via index.scss, except for some of independent styles of components.`
 
 #### TESTS
 - Tested on lates Chrome and Firefox
@@ -100,6 +110,6 @@ externals: {
 
 #### Bugs
 - let me know.
-- _not sure if this qualifies as bug_, but images need to be imported manualy from `/src/libs/img` to `build/src/img` after build complete, _i havent configured webpack to run another process for this._
+- _not sure if this qualifies as bug_, but images need to be imported manually from `/src/libs/img` to `build/src/img` after build complete, _i have'nt configured webpack to run another process for this._
 
 #### Thank you
